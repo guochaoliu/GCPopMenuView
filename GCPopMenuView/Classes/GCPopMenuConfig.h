@@ -24,6 +24,8 @@ typedef enum : NSUInteger {
 @property (nonatomic, assign) CGRect souceRect;
 /// 设置则menu显示在targetView范围内
 @property (nonatomic, weak) UIView *targetView;
+/// 设置则menu显示在targetRect范围内
+@property (nonatomic, assign) CGRect targetRect;
 /// 数据源
 @property (nonatomic, strong) NSArray<GCPopMenuItem *> *itemArray;
 #pragma mark -- menu config

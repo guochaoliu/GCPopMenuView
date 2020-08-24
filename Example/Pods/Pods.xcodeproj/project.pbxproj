@@ -77,8 +77,10 @@
 		DEA7C8278F96A0A4C9B8580D5A3DD289 /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = 08D53EDBD502807588429AF152D18C34 /* Masonry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E0B8D095C732352C854D365B9E5B993D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA5D77C546B301543C64F5CB9FFBFF60 /* UIKit.framework */; };
 		E332B1D8D4BCB1EFB3E88968417D9C51 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E91730F005C772B23BE3C966363A55BA /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4824BCA24F3B57E00FF959F /* UIView+GC.m in Sources */ = {isa = PBXBuildFile; fileRef = E4824BC824F3B57E00FF959F /* UIView+GC.m */; };
-		E4824BCB24F3B57E00FF959F /* UIView+GC.h in Headers */ = {isa = PBXBuildFile; fileRef = E4824BC924F3B57E00FF959F /* UIView+GC.h */; };
+		E4824BD124F3C3E300FF959F /* UIView+GC.m in Sources */ = {isa = PBXBuildFile; fileRef = E4824BCF24F3C3E300FF959F /* UIView+GC.m */; };
+		E4824BD224F3C3E300FF959F /* UIView+GC.m in Sources */ = {isa = PBXBuildFile; fileRef = E4824BCF24F3C3E300FF959F /* UIView+GC.m */; };
+		E4824BD324F3C3E300FF959F /* UIView+GC.h in Headers */ = {isa = PBXBuildFile; fileRef = E4824BD024F3C3E300FF959F /* UIView+GC.h */; };
+		E4824BD424F3C3E300FF959F /* UIView+GC.h in Headers */ = {isa = PBXBuildFile; fileRef = E4824BD024F3C3E300FF959F /* UIView+GC.h */; };
 		E8AC509D18EBF21B1FEA909652A01108 /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = B53EB5133A85E71DC07D901E0C3F5DBC /* FBSnapshotTestCasePlatform.m */; };
 		EB0F23D4953438F4935867C83B51EFD7 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EDCE0D65B76BA56E0403CB4157D3D3 /* MASViewConstraint.m */; };
 		ED61986FD85615F4AE3D0EE7EFB484DE /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 03480EE98EC308067AAAE2DC0484A272 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -243,8 +245,8 @@
 		E0FCDF8FA6475676EB4D182EC45A55B6 /* Pods-GCPopMenuView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GCPopMenuView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E30A1DA2B0702D887E1AED51E8A9ED73 /* FBSnapshotTestCasePlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCasePlatform.h; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.h; sourceTree = "<group>"; };
 		E387373D5985791A8DDBA13C2F0C1F4C /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
-		E4824BC824F3B57E00FF959F /* UIView+GC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+GC.m"; path = "GCPopMenuView/Classes/UIView+GC.m"; sourceTree = "<group>"; };
-		E4824BC924F3B57E00FF959F /* UIView+GC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+GC.h"; path = "GCPopMenuView/Classes/UIView+GC.h"; sourceTree = "<group>"; };
+		E4824BCF24F3C3E300FF959F /* UIView+GC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+GC.m"; path = "GCPopMenuView/Classes/UIView+GC.m"; sourceTree = "<group>"; };
+		E4824BD024F3C3E300FF959F /* UIView+GC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+GC.h"; path = "GCPopMenuView/Classes/UIView+GC.h"; sourceTree = "<group>"; };
 		E5A6E151AD931B6189D004D32A05E9DE /* Pods_GCPopMenuView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GCPopMenuView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E91730F005C772B23BE3C966363A55BA /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		E9F49D7D3917A1D3F437379FF67EEF5E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -470,18 +472,18 @@
 		B94A88BFEE1218785F367586EE22219A /* GCPopMenuView */ = {
 			isa = PBXGroup;
 			children = (
-				7F04733EBBDCE24D83600AB93A22C0DE /* GCPopMenuArrow.h */,
-				D7B73F7081B9FB5372AAED3DB61750EA /* GCPopMenuArrow.m */,
-				48C996B8ADC57D1F9D321F42E1ADDC01 /* GCPopMenuCell.h */,
-				07D57DA80DE9A15FCBAABE5439CFF5B0 /* GCPopMenuCell.m */,
-				4FC049CDB1FF8F4E5CC058B1A4B0DFE9 /* GCPopMenuConfig.h */,
-				15A3CC04851F63848A2B633F3F42F4E9 /* GCPopMenuConfig.m */,
-				2D2A573225CB710983C0A01544CA3EBF /* GCPopMenuItem.h */,
-				0DC59C31398848D43E24F3DD40553FA3 /* GCPopMenuItem.m */,
 				221D61D8C7FF89F397C63FB09D185D33 /* GCPopMenuView.h */,
 				37B60FC5662950A75D37D64EE5C5D7AA /* GCPopMenuView.m */,
-				E4824BC924F3B57E00FF959F /* UIView+GC.h */,
-				E4824BC824F3B57E00FF959F /* UIView+GC.m */,
+				4FC049CDB1FF8F4E5CC058B1A4B0DFE9 /* GCPopMenuConfig.h */,
+				15A3CC04851F63848A2B633F3F42F4E9 /* GCPopMenuConfig.m */,
+				48C996B8ADC57D1F9D321F42E1ADDC01 /* GCPopMenuCell.h */,
+				07D57DA80DE9A15FCBAABE5439CFF5B0 /* GCPopMenuCell.m */,
+				2D2A573225CB710983C0A01544CA3EBF /* GCPopMenuItem.h */,
+				0DC59C31398848D43E24F3DD40553FA3 /* GCPopMenuItem.m */,
+				7F04733EBBDCE24D83600AB93A22C0DE /* GCPopMenuArrow.h */,
+				D7B73F7081B9FB5372AAED3DB61750EA /* GCPopMenuArrow.m */,
+				E4824BD024F3C3E300FF959F /* UIView+GC.h */,
+				E4824BCF24F3C3E300FF959F /* UIView+GC.m */,
 				3C003A1DC317E92C02A08AD31F79F76C /* ReplaceMe.m */,
 				9FB8AE2B0E1259470EA9A58C3F5A4D04 /* Pod */,
 				84AB57B812359ED67D0864BBE275F7FF /* Support Files */,
@@ -642,7 +644,7 @@
 				40039E0AF0D764360B1D4FC4F7950D2E /* UIApplication+StrictKeyWindow.h in Headers */,
 				F1AAAE00BB32B733B238E2B4E8424506 /* UIImage+Compare.h in Headers */,
 				D04AAC8B22E4A4DC4F39891C4E52F251 /* UIImage+Diff.h in Headers */,
-				E4824BCB24F3B57E00FF959F /* UIView+GC.h in Headers */,
+				E4824BD324F3C3E300FF959F /* UIView+GC.h in Headers */,
 				B74CD6E6EBEA0B642776BCB37850415D /* UIImage+Snapshot.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -676,6 +678,7 @@
 			files = (
 				33BC2E0F29AAEC775C8C3C579BF81308 /* GCPopMenuArrow.h in Headers */,
 				D456ECC15F90D9F982065F031091399A /* GCPopMenuCell.h in Headers */,
+				E4824BD424F3C3E300FF959F /* UIView+GC.h in Headers */,
 				23FADC9AAE9633DFC566700595828F0D /* GCPopMenuConfig.h in Headers */,
 				BCEC2C0F5C59F6D27550DB1CA463E8A7 /* GCPopMenuItem.h in Headers */,
 				1D5C98F7B78FA7D726A57B474F715746 /* GCPopMenuView-umbrella.h in Headers */,
@@ -887,6 +890,7 @@
 				F2364CC473BEBEBB787BF00C5BF43782 /* GCPopMenuCell.m in Sources */,
 				5A759334ECEE313137A310235B5599AA /* GCPopMenuConfig.m in Sources */,
 				DDF925F4FFAE24F60A342C9D84A7AB33 /* GCPopMenuItem.m in Sources */,
+				E4824BD224F3C3E300FF959F /* UIView+GC.m in Sources */,
 				543280B1D6C53EAF350E7FF487C642BA /* GCPopMenuView-dummy.m in Sources */,
 				AF85187145811BD1E6795A3B7E911061 /* GCPopMenuView.m in Sources */,
 				B5EA197CB9ABF96117531413B9373038 /* ReplaceMe.m in Sources */,
@@ -939,7 +943,7 @@
 				88396E68DC05A379282F3B374F75F43C /* FBSnapshotTestController.m in Sources */,
 				9D65089019D558E5A9661F2DCAD20313 /* SwiftSupport.swift in Sources */,
 				11C410135C7E89353B480AC8DE0BFB77 /* UIApplication+StrictKeyWindow.m in Sources */,
-				E4824BCA24F3B57E00FF959F /* UIView+GC.m in Sources */,
+				E4824BD124F3C3E300FF959F /* UIView+GC.m in Sources */,
 				2DCFF0CE0BD295F1D46D3247F36B192C /* UIImage+Compare.m in Sources */,
 				14AD81D52FAD9CF2C065C61FB00C3B4F /* UIImage+Diff.m in Sources */,
 				A525E29E0A8079B35B793D8A2B5FBDF2 /* UIImage+Snapshot.m in Sources */,

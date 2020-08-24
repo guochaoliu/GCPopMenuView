@@ -160,11 +160,16 @@
     [self refreshArrowViewFrame];
 }
 - (void)refreshTableViewFrame{
-    if (!self.config.targetView) {
+    if (!self.config.targetView && (self.config.targetRect.size.width == 0 || self.config.targetRect.size.height == 0)) {
         return;
     }
     UIWindow *window = [[GCAssistWindowManager manager] getWindowWithIdentifier:AssistWindow_PopMenu];
-    CGRect rect = [self.config.targetView convertRect:self.config.targetView.bounds toView:window];
+    CGRect rect;
+    if (self.config.targetView) {
+        rect = [self.config.targetView convertRect:self.config.targetView.bounds toView:window];
+    }else{
+        rect = self.config.targetRect;
+    }
     CGFloat targetX = rect.origin.x;
     CGFloat targetY = rect.origin.y;
     CGFloat minX = targetX + self.config.menuInterval / 2;
@@ -173,7 +178,7 @@
     }
     CGFloat maxX = rect.size.width - self.config.menuInterval / 2;
     if (self.tableView.maxX > maxX) {
-        self.tableView.frame = CGRectMake(self.config.targetView.maxX - self.tableView.width - 6, self.tableView.y, self.config.menuWidth, self.config.menuHeight);
+        self.tableView.frame = CGRectMake(rect.origin.x + rect.size.width  - self.tableView.width - 6, self.tableView.y, self.config.menuWidth, self.config.menuHeight);
     }
     CGFloat minY = targetY + self.config.menuInterval / 2;
     if (self.tableView.minY < minY) {
@@ -185,11 +190,16 @@
     }
 }
 - (void)refreshArrowViewFrame{
-    if (!self.config.targetView) {
+    if (!self.config.targetView && (self.config.targetRect.size.width == 0 || self.config.targetRect.size.height == 0)) {
         return;
     }
     UIWindow *window = [[GCAssistWindowManager manager] getWindowWithIdentifier:AssistWindow_PopMenu];
-    CGRect rect = [self.config.targetView convertRect:self.config.targetView.bounds toView:window];
+    CGRect rect;
+    if (self.config.targetView) {
+        rect = [self.config.targetView convertRect:self.config.targetView.bounds toView:window];
+    }else{
+        rect = self.config.targetRect;
+    }
     CGFloat targetX = rect.origin.x;
     CGFloat targetY = rect.origin.y;
     CGFloat minX = targetX + self.config.menuInterval;
@@ -198,7 +208,7 @@
     }
     CGFloat maxX = targetX + rect.size.width - self.config.menuInterval;
     if (self.arrowView.maxX > maxX) {
-        self.arrowView.frame = CGRectMake(self.config.targetView.maxX - self.arrowView.width - 12, self.arrowView.y, self.config.arrowWidth, self.config.arrowHeight);
+        self.arrowView.frame = CGRectMake(rect.origin.x + rect.size.width - self.arrowView.width - 12, self.arrowView.y, self.config.arrowWidth, self.config.arrowHeight);
     }
     CGFloat minY = targetY + self.config.menuInterval;
     if (self.arrowView.minY < minY) {
