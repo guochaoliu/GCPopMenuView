@@ -1,0 +1,27 @@
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - GCPopMenuView (0.1.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - GCPopMenuView (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  GCPopMenuView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  GCPopMenuView: 0363f5607a1e60916c743ee7e7d95aa70e747843
+
+PODFILE CHECKSUM: 57ee5fe4c1bc939d22f3aa31c6a8c2556cb5e460
+
+COCOAPODS: 1.9.1

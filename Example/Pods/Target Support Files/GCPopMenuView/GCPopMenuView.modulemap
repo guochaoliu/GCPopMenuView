@@ -1,0 +1,6 @@
+framework module GCPopMenuView {
+  umbrella header "GCPopMenuView-umbrella.h"
+
+  export *
+  module * { export * }
+}
