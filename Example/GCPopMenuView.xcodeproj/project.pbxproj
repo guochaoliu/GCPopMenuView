@@ -23,6 +23,7 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		E1CE6333B83DB8812891B4E4 /* Pods_GCPopMenuView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5115326F6759F5C3E7069967 /* Pods_GCPopMenuView_Tests.framework */; };
+		E4824BCE24F3B87700FF959F /* GCPopMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4824BCD24F3B87700FF959F /* GCPopMenuViewController.m */; };
 		F19295031DA567BF98BC9673 /* Pods_GCPopMenuView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0858E0F9686DE327F1E773DF /* Pods_GCPopMenuView_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,8 @@
 		D396A1E1E4595548819A8713 /* Pods-GCPopMenuView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCPopMenuView_Example.release.xcconfig"; path = "Target Support Files/Pods-GCPopMenuView_Example/Pods-GCPopMenuView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D3B0C91F7B69B168A552238A /* Pods-GCPopMenuView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCPopMenuView_Tests.release.xcconfig"; path = "Target Support Files/Pods-GCPopMenuView_Tests/Pods-GCPopMenuView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		DA34E51270993DADEAE14834 /* Pods-GCPopMenuView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCPopMenuView_Example.debug.xcconfig"; path = "Target Support Files/Pods-GCPopMenuView_Example/Pods-GCPopMenuView_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		E4824BCC24F3B87700FF959F /* GCPopMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCPopMenuViewController.h; sourceTree = "<group>"; };
+		E4824BCD24F3B87700FF959F /* GCPopMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCPopMenuViewController.m; sourceTree = "<group>"; };
 		E51204F3E58B748E2DEC6F14 /* GCPopMenuView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = GCPopMenuView.podspec; path = ../GCPopMenuView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
@@ -148,6 +151,8 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* GCViewController.h */,
 				6003F5A6195388D20070C39A /* GCViewController.m */,
+				E4824BCC24F3B87700FF959F /* GCPopMenuViewController.h */,
+				E4824BCD24F3B87700FF959F /* GCPopMenuViewController.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -391,6 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* GCAppDelegate.m in Sources */,
+				E4824BCE24F3B87700FF959F /* GCPopMenuViewController.m in Sources */,
 				6003F5A7195388D20070C39A /* GCViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
