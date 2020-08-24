@@ -18,5 +18,13 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "GCPopMenuView/Classes/**/*"
+  "source_files": "GCPopMenuView/Classes/**/*",
+  "dependencies": {
+    "GCAssistWindow": [
+
+    ],
+    "Masonry": [
+
+    ]
+  }
 }

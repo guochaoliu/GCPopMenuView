@@ -4,7 +4,11 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - GCPopMenuView (0.1.0)
+  - GCAssistWindow (0.1.2)
+  - GCPopMenuView (0.1.0):
+    - GCAssistWindow
+    - Masonry
+  - Masonry (1.1.0)
 
 DEPENDENCIES:
   - FBSnapshotTestCase
@@ -13,6 +17,8 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - FBSnapshotTestCase
+    - GCAssistWindow
+    - Masonry
 
 EXTERNAL SOURCES:
   GCPopMenuView:
@@ -20,7 +26,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  GCPopMenuView: 0363f5607a1e60916c743ee7e7d95aa70e747843
+  GCAssistWindow: c4f9616d550590fd389db943fbc640c975f5958f
+  GCPopMenuView: c40f8963efc859a0d310c82bc1f4a1b76db41e6a
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
 PODFILE CHECKSUM: 57ee5fe4c1bc939d22f3aa31c6a8c2556cb5e460
 

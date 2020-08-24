@@ -6,7 +6,7 @@
 //
 
 #import "GCPopMenuView.h"
-#import "DHAssistWindowManager.h"
+#import <GCAssistWindow/GCAssistWindowManager.h>
 #import "GCPopMenuArrow.h"
 #import "GCPopMenuCell.h"
 #import "UIView+GC.h"
@@ -62,7 +62,7 @@
     return arrowView;
 }
 - (void)refreshFrame{
-    UIWindow *window = [[DHAssistWindowManager manager] getWindowWithIdentifier:AssistWindow_PopMenu];
+    UIWindow *window = [[GCAssistWindowManager manager] getWindowWithIdentifier:AssistWindow_PopMenu];
     CGRect rect = self.config.souceView?[self.config.souceView convertRect:self.config.souceView.bounds toView:window]:self.config.souceRect;
     switch (self.config.arrowDirection) {
         case GCPopMenuArrowDirectionUP:
@@ -163,7 +163,7 @@
     if (!self.config.targetView) {
         return;
     }
-    UIWindow *window = [[DHAssistWindowManager manager] getWindowWithIdentifier:AssistWindow_PopMenu];
+    UIWindow *window = [[GCAssistWindowManager manager] getWindowWithIdentifier:AssistWindow_PopMenu];
     CGRect rect = [self.config.targetView convertRect:self.config.targetView.bounds toView:window];
     CGFloat targetX = rect.origin.x;
     CGFloat targetY = rect.origin.y;
@@ -188,7 +188,7 @@
     if (!self.config.targetView) {
         return;
     }
-    UIWindow *window = [[DHAssistWindowManager manager] getWindowWithIdentifier:AssistWindow_PopMenu];
+    UIWindow *window = [[GCAssistWindowManager manager] getWindowWithIdentifier:AssistWindow_PopMenu];
     CGRect rect = [self.config.targetView convertRect:self.config.targetView.bounds toView:window];
     CGFloat targetX = rect.origin.x;
     CGFloat targetY = rect.origin.y;
@@ -212,19 +212,15 @@
 - (void)showWithConfig:(GCPopMenuConfig *)config{
     self.config = config;
     [self setupUI];
-    [[DHAssistWindowManager manager] makeKeyWindowWithRootViewController:self identifier:AssistWindow_PopMenu];
+    [[GCAssistWindowManager manager] makeKeyWindowWithRootViewController:self identifier:AssistWindow_PopMenu];
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [[DHAssistWindowManager manager] deallocAssistWindowWithIdentifier:AssistWindow_PopMenu animation:YES completion:^(BOOL finish) {
-        
-    }];
+    [[GCAssistWindowManager manager] deallocWindowWithIdentifier:AssistWindow_PopMenu];
 }
 #pragma mark -- UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [[DHAssistWindowManager manager] deallocAssistWindowWithIdentifier:AssistWindow_PopMenu animation:YES completion:^(BOOL finish) {
-        
-    }];
+    [[GCAssistWindowManager manager] deallocWindowWithIdentifier:AssistWindow_PopMenu];
 }
 #pragma mark -- UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{

@@ -7,52 +7,96 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00224C929D57F45B70E87359E719948D /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = FEE661E58CA6655B39AA49AA4C021C33 /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0C8A8047983F88AD03B460A43BA70165 /* Pods-GCPopMenuView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EF073151E41B243A3B0B468764352054 /* Pods-GCPopMenuView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		11C410135C7E89353B480AC8DE0BFB77 /* UIApplication+StrictKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F538C426803AE34255FC6E35B408CCA /* UIApplication+StrictKeyWindow.m */; };
-		14AD81D52FAD9CF2C065C61FB00C3B4F /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = 4568279DE47DC3AB91598E1317503995 /* UIImage+Diff.m */; };
-		14C511527597E5846AB2627F791C7D8E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 716A9972B9D9103B54DB950893FAF104 /* QuartzCore.framework */; };
-		2DB5FED8B27AC26216EE9B3EAC555A01 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = C452FB6737137C040329AB288DF10E8B /* ReplaceMe.m */; };
-		2DCFF0CE0BD295F1D46D3247F36B192C /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 235A78CFFA6D8B8D86CACD733531CB13 /* UIImage+Compare.m */; };
-		39403EC913F7C40EEA58E6EF332E730A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD4ED544B638D07C7D755AF1C27116A /* Foundation.framework */; };
-		40039E0AF0D764360B1D4FC4F7950D2E /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 99A67367E018411D614EC8536A8A1C5B /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		6AE239C5D116E1C06F5705699FB9EAF0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E601BD54DA9BF4071437E60125281FA /* XCTest.framework */; };
-		6DBC8EB7532E931C2FBDA71D1E0B66A4 /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA6E655DC84D06359BD0ED5E36C783 /* FBSnapshotTestCase-dummy.m */; };
-		77954163DBD8427ED83C91E734F3204D /* GCPopMenuView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0173E7ADD67F8F0751B8B61FFF90B964 /* GCPopMenuView-dummy.m */; };
+		00224C929D57F45B70E87359E719948D /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = BFB58E20D172C49FE4A9A8B100C0E133 /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0032411CC63578288D1E03D629CB1C8D /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 856092FFA94FC2B0DA39674A0B0090FC /* MASUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03730C6E379E811BDDE1B3DCB3D2F94E /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 3178F9486F1712933F1FAB4673393C3A /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		095E578A120FE4C7459E4397FFD0FA8E /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 779C5BFB544A6E7C576BA75F4BF5B770 /* Masonry-dummy.m */; };
+		0A7FC8A555F113EA6A8FBEF884DAF111 /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C013E1F32FD9B10BD465B83BDCD49E75 /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A8E993FFC17D8EBFB8C9F2EF474819E /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D2CD918B3F2732D5B7721BF221E6E1F /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		11C410135C7E89353B480AC8DE0BFB77 /* UIApplication+StrictKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = DE338E82EE9E2DEFFA2B6BF5ED78C990 /* UIApplication+StrictKeyWindow.m */; };
+		14AD81D52FAD9CF2C065C61FB00C3B4F /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7E12555E37C4F89760D9DFC380FC89 /* UIImage+Diff.m */; };
+		14C511527597E5846AB2627F791C7D8E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15EC77296767C1245DA0E82CCB963496 /* QuartzCore.framework */; };
+		14FFE7B37BBDB80E52FC5BE2DF08733B /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D51C7396B2277D57A90114FB9B3D4C /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		198D95958F9B698B7DD9CFF0087549D0 /* GCPopMenuArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B73F7081B9FB5372AAED3DB61750EA /* GCPopMenuArrow.m */; };
+		199BC30087EE13D48B8CE5AAFB76AF3C /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D75DBF6E67E4A5C2247E4142C795FC56 /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D5C98F7B78FA7D726A57B474F715746 /* GCPopMenuView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 97E26EF459F3273CA11FBDDB3D9272F9 /* GCPopMenuView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20A8580F489B0CE0D3B523472DC3AACD /* Pods-GCPopMenuView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E67AAD3FDFB229A002DF4495A3A039 /* Pods-GCPopMenuView_Example-dummy.m */; };
+		21001FB020160AFBF6D7E2B84666395B /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 357D4708DC3D51E44BFBB06B7A298DCA /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		23FADC9AAE9633DFC566700595828F0D /* GCPopMenuConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FC049CDB1FF8F4E5CC058B1A4B0DFE9 /* GCPopMenuConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2DCFF0CE0BD295F1D46D3247F36B192C /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 629C2A845988891B5DDE7CB9EB2EBA8F /* UIImage+Compare.m */; };
+		33BC2E0F29AAEC775C8C3C579BF81308 /* GCPopMenuArrow.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F04733EBBDCE24D83600AB93A22C0DE /* GCPopMenuArrow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		39403EC913F7C40EEA58E6EF332E730A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD6144729B4BCCD46A65A182F2214BB /* Foundation.framework */; };
+		40039E0AF0D764360B1D4FC4F7950D2E /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = D7094AE5CE8EA8D49F95520EB1272D3D /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		40A94A01FEDCF226816AFDA2E4184A73 /* GCAssistWindowManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F7281EBCBD2A4A7EF2B65B4BB6EC608A /* GCAssistWindowManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C088482845AD3FF0746A921890B4666 /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FED63450E666D9B40E0551DDE5ED303 /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		543280B1D6C53EAF350E7FF487C642BA /* GCPopMenuView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E2013099E1E3C77C17C51AEDCDB2A0 /* GCPopMenuView-dummy.m */; };
+		54CD273A787280EA588D98A4B1AB916D /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F92E77CC219D585D7B6659710CDC9839 /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A759334ECEE313137A310235B5599AA /* GCPopMenuConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A3CC04851F63848A2B633F3F42F4E9 /* GCPopMenuConfig.m */; };
+		6143B920886DEAA1F3C6EB28E045AC8C /* GCAssistWindow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFEFA34F4244BD5531CC2EAEC11B6FDD /* GCAssistWindow.framework */; };
+		6A669573E13B35C628C76BFD61617F8C /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = E387373D5985791A8DDBA13C2F0C1F4C /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6ACD28D6A67A4A9E87711B5114C70B12 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A4CC6E3FF34E7A16B04FAA146C27E2 /* View+MASAdditions.m */; };
+		6AE239C5D116E1C06F5705699FB9EAF0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF03571FF6096D0F67406744D1A66E7 /* XCTest.framework */; };
+		6DBC8EB7532E931C2FBDA71D1E0B66A4 /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BEDFEAB90AF373803AB7321C8C8522 /* FBSnapshotTestCase-dummy.m */; };
+		747E922C28B5770739612369234421B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD6144729B4BCCD46A65A182F2214BB /* Foundation.framework */; };
+		7599ABFC630A5FD24962377ED48C83B1 /* GCAssistWindow-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 534193BC62F2F2855AD44E6B734B430C /* GCAssistWindow-dummy.m */; };
+		76175C8EFBE704C6E0415686D3CD2D0D /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = B533A25462E80326604E226386892AFB /* ReplaceMe.m */; };
 		792B74EB007D14D94F792BCA84E6A15A /* Pods-GCPopMenuView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBA62A469A45FC1C68CB9F953AFE8E5 /* Pods-GCPopMenuView_Tests-dummy.m */; };
+		7F5C5974CF4CCDCF95BC905663699509 /* Masonry-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CE33C0727278283F978B77234622E308 /* Masonry-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		854B9EA034AE5A305AE4BBA6447C9795 /* Pods-GCPopMenuView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DA88D6AF7F460A8A1904F28D2F1616EC /* Pods-GCPopMenuView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		88396E68DC05A379282F3B374F75F43C /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1B7EA746BF6557FD565BAE12AF9198 /* FBSnapshotTestController.m */; };
-		8CE3BF0ACE07EA42DD5DAC871BF4B767 /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 277B6BE10C665F515606A22FD60C6DCC /* FBSnapshotTestCase.m */; };
-		90142C6259374E18E640396A59AD379A /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = AE9FF9459FBCDC4AF88FB6B5A4CC1439 /* FBSnapshotTestController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9D65089019D558E5A9661F2DCAD20313 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0D66CF296ABBC57EC4D0452397E235 /* SwiftSupport.swift */; };
-		A525E29E0A8079B35B793D8A2B5FBDF2 /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = D872A3EE224412D4057C234FBC629F9C /* UIImage+Snapshot.m */; };
-		B10885D0B6B0020A5E5F702A87B41DF0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD4ED544B638D07C7D755AF1C27116A /* Foundation.framework */; };
-		B25D795BDC4F426BC01EFC911F368B81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD4ED544B638D07C7D755AF1C27116A /* Foundation.framework */; };
-		B74CD6E6EBEA0B642776BCB37850415D /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 284833D18C244D2B42966B6EE425AA59 /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		C49D52712466511E332C952834C81FE1 /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 88B1DEEBF6316A84D7413645212492FF /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D04AAC8B22E4A4DC4F39891C4E52F251 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = 96187BF3038121CC146335E9FF0B0AFF /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		E0B8D095C732352C854D365B9E5B993D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAA89EEF1039078430D7A886477E365 /* UIKit.framework */; };
-		E4347FC9523B65A3855E32ACCBFDDEC6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD4ED544B638D07C7D755AF1C27116A /* Foundation.framework */; };
-		E4824BA824F3A35100FF959F /* GCPopMenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = E4824B9C24F3A35000FF959F /* GCPopMenuItem.h */; };
-		E4824BA924F3A35100FF959F /* GCPopMenuArrow.h in Headers */ = {isa = PBXBuildFile; fileRef = E4824B9D24F3A35000FF959F /* GCPopMenuArrow.h */; };
-		E4824BAA24F3A35100FF959F /* GCPopMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E4824B9E24F3A35000FF959F /* GCPopMenuCell.m */; };
-		E4824BAB24F3A35100FF959F /* UIView+GC.m in Sources */ = {isa = PBXBuildFile; fileRef = E4824B9F24F3A35000FF959F /* UIView+GC.m */; };
-		E4824BAC24F3A35100FF959F /* GCPopMenuConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E4824BA024F3A35000FF959F /* GCPopMenuConfig.m */; };
-		E4824BAD24F3A35100FF959F /* GCPopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4824BA124F3A35100FF959F /* GCPopMenuView.m */; };
-		E4824BAE24F3A35100FF959F /* GCPopMenuArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = E4824BA224F3A35100FF959F /* GCPopMenuArrow.m */; };
-		E4824BAF24F3A35100FF959F /* GCPopMenuCell.h in Headers */ = {isa = PBXBuildFile; fileRef = E4824BA324F3A35100FF959F /* GCPopMenuCell.h */; };
-		E4824BB024F3A35100FF959F /* GCPopMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E4824BA424F3A35100FF959F /* GCPopMenuItem.m */; };
-		E4824BB124F3A35100FF959F /* GCPopMenuView.h in Headers */ = {isa = PBXBuildFile; fileRef = E4824BA524F3A35100FF959F /* GCPopMenuView.h */; };
-		E4824BB224F3A35100FF959F /* UIView+GC.h in Headers */ = {isa = PBXBuildFile; fileRef = E4824BA624F3A35100FF959F /* UIView+GC.h */; };
-		E4824BB324F3A35100FF959F /* GCPopMenuConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = E4824BA724F3A35100FF959F /* GCPopMenuConfig.h */; };
-		E8AC509D18EBF21B1FEA909652A01108 /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ABB3EB3CCC5BCA82F40FE8DC87BB778 /* FBSnapshotTestCasePlatform.m */; };
-		EDCD8A0794FBE9C2AFA350E04FAB410E /* Pods-GCPopMenuView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E67AAD3FDFB229A002DF4495A3A039 /* Pods-GCPopMenuView_Example-dummy.m */; };
-		F1AAAE00BB32B733B238E2B4E8424506 /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 656116C8FA5458F45D4707110C9530EC /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		F4AF04E2801FCAE454A7B505E748D667 /* GCPopMenuView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E942CEE8EC33C25B90B49AFD4E8B7F7 /* GCPopMenuView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F720FAF13A108CE6901E0A8B0580E1E8 /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E5923010B02074CAA9AAF6EA02D66AA /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		856BCA75F676A6FD82784FEA018CEDA0 /* Pods-GCPopMenuView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EF073151E41B243A3B0B468764352054 /* Pods-GCPopMenuView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		875B66DFC773F3D667819E6A0292934D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD6144729B4BCCD46A65A182F2214BB /* Foundation.framework */; };
+		88396E68DC05A379282F3B374F75F43C /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B609177955B62A209A1390F4E17EE2 /* FBSnapshotTestController.m */; };
+		8CE3BF0ACE07EA42DD5DAC871BF4B767 /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9860B2CE2BC5F5D730D3896E1DDFF3E2 /* FBSnapshotTestCase.m */; };
+		90142C6259374E18E640396A59AD379A /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = DFE5DA32F75095B8EC09C9EA0766D81B /* FBSnapshotTestController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90E575AB35545092035398C8199851AF /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = FB0BC2F1AA1ED77112701FE706973605 /* MASConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9D65089019D558E5A9661F2DCAD20313 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6136D0DBEF3E112D1DC62D107A810C3 /* SwiftSupport.swift */; };
+		A0C167961CADB5EB5FFE8DA9AB1DD5C7 /* GCPopMenuView.h in Headers */ = {isa = PBXBuildFile; fileRef = 221D61D8C7FF89F397C63FB09D185D33 /* GCPopMenuView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A126CFC9B38EA9FC31F46155EE1B1398 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD6144729B4BCCD46A65A182F2214BB /* Foundation.framework */; };
+		A25DC6832E6F4BDCEF4B533CC298B73A /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C42CB601D9C8DBE5D4D22DF3A868F04 /* MASCompositeConstraint.m */; };
+		A525E29E0A8079B35B793D8A2B5FBDF2 /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F8FF902B0A9AED12A0E8C808CB87B8 /* UIImage+Snapshot.m */; };
+		A69415A0FB4C451CA24AA54F26833D57 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 834B6A1382E40FA1C9F05F4B96EE4296 /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA2C37C244578D9A3D4D020CAD9F0CA7 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B428CA0521A241A92FBE6EA2AA7D36 /* MASViewAttribute.m */; };
+		AF85187145811BD1E6795A3B7E911061 /* GCPopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B60FC5662950A75D37D64EE5C5D7AA /* GCPopMenuView.m */; };
+		B08A5F6D8AAE02716097941DB6DA5535 /* GCAssistWindow-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BDD6106BD1B0170E92F41C8A8B8A7B72 /* GCAssistWindow-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B25D795BDC4F426BC01EFC911F368B81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD6144729B4BCCD46A65A182F2214BB /* Foundation.framework */; };
+		B5EA197CB9ABF96117531413B9373038 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C003A1DC317E92C02A08AD31F79F76C /* ReplaceMe.m */; };
+		B67A71CD663BE9F3C40E91A818F7D58B /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC58A806A3D9727CD61B3136B18AF55 /* NSArray+MASAdditions.m */; };
+		B74CD6E6EBEA0B642776BCB37850415D /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = B9CBFB914C1B2FD71453C3E8AE8880B4 /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		BCEC2C0F5C59F6D27550DB1CA463E8A7 /* GCPopMenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D2A573225CB710983C0A01544CA3EBF /* GCPopMenuItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDBE272510402FC0995934D50F047008 /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 84E14D3C13F7FA77F95C514714F0B46D /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C30F12251CE9B80776CDC13A3C5194F4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA5D77C546B301543C64F5CB9FFBFF60 /* UIKit.framework */; };
+		C49D52712466511E332C952834C81FE1 /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = E30A1DA2B0702D887E1AED51E8A9ED73 /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C923261B53ECF286382C25B30C6B3081 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD6144729B4BCCD46A65A182F2214BB /* Foundation.framework */; };
+		CC7860D7BCB2C780DEDD1C9C6EA7CFCA /* GCAssistWindowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1082FB6EB8778C7896E875759C26E /* GCAssistWindowManager.m */; };
+		CF38B749AAB9F4DD2C83E5C56812EAEC /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E0E3DDB26F4080079AE46D79B020AE /* MASLayoutConstraint.m */; };
+		D04AAC8B22E4A4DC4F39891C4E52F251 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = DDC254C14BA833746FDFF21B168B1238 /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D456ECC15F90D9F982065F031091399A /* GCPopMenuCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 48C996B8ADC57D1F9D321F42E1ADDC01 /* GCPopMenuCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DCD0F002EDA328A87CDF6FAB3DD30753 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EE2A06DDBC2CD62D5A744FEA5F78D549 /* ViewController+MASAdditions.m */; };
+		DDF925F4FFAE24F60A342C9D84A7AB33 /* GCPopMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DC59C31398848D43E24F3DD40553FA3 /* GCPopMenuItem.m */; };
+		DE61C6BF562E349978BBD3C97C3E2C8D /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5E030AF64026860B9549F4F06E736B /* Masonry.framework */; };
+		DEA7C8278F96A0A4C9B8580D5A3DD289 /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = 08D53EDBD502807588429AF152D18C34 /* Masonry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E0B8D095C732352C854D365B9E5B993D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA5D77C546B301543C64F5CB9FFBFF60 /* UIKit.framework */; };
+		E332B1D8D4BCB1EFB3E88968417D9C51 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E91730F005C772B23BE3C966363A55BA /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E4824BCA24F3B57E00FF959F /* UIView+GC.m in Sources */ = {isa = PBXBuildFile; fileRef = E4824BC824F3B57E00FF959F /* UIView+GC.m */; };
+		E4824BCB24F3B57E00FF959F /* UIView+GC.h in Headers */ = {isa = PBXBuildFile; fileRef = E4824BC924F3B57E00FF959F /* UIView+GC.h */; };
+		E8AC509D18EBF21B1FEA909652A01108 /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = B53EB5133A85E71DC07D901E0C3F5DBC /* FBSnapshotTestCasePlatform.m */; };
+		EB0F23D4953438F4935867C83B51EFD7 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EDCE0D65B76BA56E0403CB4157D3D3 /* MASViewConstraint.m */; };
+		ED61986FD85615F4AE3D0EE7EFB484DE /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 03480EE98EC308067AAAE2DC0484A272 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F1AAAE00BB32B733B238E2B4E8424506 /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = F58052AFF26EC5A3C972B18786C66984 /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F2364CC473BEBEBB787BF00C5BF43782 /* GCPopMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D57DA80DE9A15FCBAABE5439CFF5B0 /* GCPopMenuCell.m */; };
+		F32E6E8110971DAEA61DEA0EC8D5A255 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B75D5B9FA9CCACBE093BD81AD8B52E /* MASConstraint.m */; };
+		F720FAF13A108CE6901E0A8B0580E1E8 /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C9FD8B26E174DA4940299426430B833 /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCACD5BAACB61D5772BAEABC43938895 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A26B338691CB59413EBFA32F1EE108 /* MASConstraintMaker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0B36090BD4075D423F39843730BFD1D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6808194BD73431E47B43AD5F67AC53C7;
+			remoteInfo = GCAssistWindow;
+		};
 		645ABF62849954C8A218AA11C4276794 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -67,7 +111,28 @@
 			remoteGlobalIDString = 98A98149697C80CEF8D5772791E92E66;
 			remoteInfo = FBSnapshotTestCase;
 		};
-		E05A1E47FE1D3D9B22BCDF1093D0034F /* PBXContainerItemProxy */ = {
+		9D7B403AC147E6D698DCB92AA597377B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55AF53E6C77A10ED4985E04D74A8878E;
+			remoteInfo = Masonry;
+		};
+		BB15E0D2427421AA2C30197F19DEA6C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55AF53E6C77A10ED4985E04D74A8878E;
+			remoteInfo = Masonry;
+		};
+		DC949B043C5D28004E9A1062B8F33235 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6808194BD73431E47B43AD5F67AC53C7;
+			remoteInfo = GCAssistWindow;
+		};
+		E9C7A53CB23D71C7E4CB884D462B9AE0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -77,94 +142,150 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0173E7ADD67F8F0751B8B61FFF90B964 /* GCPopMenuView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GCPopMenuView-dummy.m"; sourceTree = "<group>"; };
+		02BEDFEAB90AF373803AB7321C8C8522 /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
+		03480EE98EC308067AAAE2DC0484A272 /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
 		069807F8DBC4A940A6AAEC648EE8A2CB /* Pods-GCPopMenuView_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GCPopMenuView_Tests-Info.plist"; sourceTree = "<group>"; };
-		0F538C426803AE34255FC6E35B408CCA /* UIApplication+StrictKeyWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+StrictKeyWindow.m"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.m"; sourceTree = "<group>"; };
+		07D57DA80DE9A15FCBAABE5439CFF5B0 /* GCPopMenuCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCPopMenuCell.m; path = GCPopMenuView/Classes/GCPopMenuCell.m; sourceTree = "<group>"; };
+		08D53EDBD502807588429AF152D18C34 /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
+		097B876E219D707455822F10073565C5 /* Masonry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.debug.xcconfig; sourceTree = "<group>"; };
+		0DC59C31398848D43E24F3DD40553FA3 /* GCPopMenuItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCPopMenuItem.m; path = GCPopMenuView/Classes/GCPopMenuItem.m; sourceTree = "<group>"; };
+		10E0E3DDB26F4080079AE46D79B020AE /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
+		139C86D2509BC9B67854746081F53450 /* GCAssistWindow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GCAssistWindow.release.xcconfig; sourceTree = "<group>"; };
+		152464B8E0236D10F534DED4CAC03895 /* GCPopMenuView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GCPopMenuView.debug.xcconfig; sourceTree = "<group>"; };
+		15A3CC04851F63848A2B633F3F42F4E9 /* GCPopMenuConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCPopMenuConfig.m; path = GCPopMenuView/Classes/GCPopMenuConfig.m; sourceTree = "<group>"; };
+		15EC77296767C1245DA0E82CCB963496 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		186F99CFAC3EF39CC6EC65FFBABA05ED /* Pods-GCPopMenuView_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GCPopMenuView_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		1A3E8580A34263886A873296BB90A257 /* Pods-GCPopMenuView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GCPopMenuView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1ADA6E655DC84D06359BD0ED5E36C783 /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
 		1B967175A202E05C7A7ABC8F5687F288 /* Pods-GCPopMenuView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GCPopMenuView_Example.release.xcconfig"; sourceTree = "<group>"; };
-		235A78CFFA6D8B8D86CACD733531CB13 /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.m"; sourceTree = "<group>"; };
-		277B6BE10C665F515606A22FD60C6DCC /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCase.m; path = FBSnapshotTestCase/FBSnapshotTestCase.m; sourceTree = "<group>"; };
-		284833D18C244D2B42966B6EE425AA59 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
-		3E942CEE8EC33C25B90B49AFD4E8B7F7 /* GCPopMenuView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GCPopMenuView-umbrella.h"; sourceTree = "<group>"; };
-		3F0D66CF296ABBC57EC4D0452397E235 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
+		1CF03571FF6096D0F67406744D1A66E7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		1F88F8D6F151EACFE67EA7D0BECA1983 /* Masonry.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Masonry.modulemap; sourceTree = "<group>"; };
+		1FFED36A657123030ABB700256D73F15 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		209105F26CFC82AD9C5C35D5047621FE /* GCPopMenuView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = GCPopMenuView.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		221D61D8C7FF89F397C63FB09D185D33 /* GCPopMenuView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCPopMenuView.h; path = GCPopMenuView/Classes/GCPopMenuView.h; sourceTree = "<group>"; };
+		24B67CFCCFB8B6FDC1549C923603F432 /* FBSnapshotTestCase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.release.xcconfig; sourceTree = "<group>"; };
+		2D2A573225CB710983C0A01544CA3EBF /* GCPopMenuItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCPopMenuItem.h; path = GCPopMenuView/Classes/GCPopMenuItem.h; sourceTree = "<group>"; };
+		3178F9486F1712933F1FAB4673393C3A /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
+		322BC39000BA587B1C79FEA38487FA09 /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
+		33A26B338691CB59413EBFA32F1EE108 /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
+		34A8117E06424199A805979C32ED0248 /* GCAssistWindow-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GCAssistWindow-Info.plist"; sourceTree = "<group>"; };
+		357D4708DC3D51E44BFBB06B7A298DCA /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		36D04E60EE12C9C2457DCFFC211A7069 /* GCPopMenuView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GCPopMenuView.modulemap; sourceTree = "<group>"; };
+		37387E348C15676D2B342060F0EC7B35 /* GCAssistWindow.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GCAssistWindow.modulemap; sourceTree = "<group>"; };
+		37B60FC5662950A75D37D64EE5C5D7AA /* GCPopMenuView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCPopMenuView.m; path = GCPopMenuView/Classes/GCPopMenuView.m; sourceTree = "<group>"; };
+		3C003A1DC317E92C02A08AD31F79F76C /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = GCPopMenuView/Classes/ReplaceMe.m; sourceTree = "<group>"; };
 		3F58C588479B40F8D78D7054B5FDB45C /* Pods-GCPopMenuView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GCPopMenuView_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		4568279DE47DC3AB91598E1317503995 /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
-		4C6513B09838318BD763CFD5390D1DE0 /* FBSnapshotTestCase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.release.xcconfig; sourceTree = "<group>"; };
-		52286DCFBFC50D87CBFD44C875E71722 /* GCPopMenuView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GCPopMenuView.modulemap; sourceTree = "<group>"; };
+		48C996B8ADC57D1F9D321F42E1ADDC01 /* GCPopMenuCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCPopMenuCell.h; path = GCPopMenuView/Classes/GCPopMenuCell.h; sourceTree = "<group>"; };
+		4EC1082FB6EB8778C7896E875759C26E /* GCAssistWindowManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCAssistWindowManager.m; path = GCAssistWindow/Classes/GCAssistWindowManager.m; sourceTree = "<group>"; };
+		4FC049CDB1FF8F4E5CC058B1A4B0DFE9 /* GCPopMenuConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCPopMenuConfig.h; path = GCPopMenuView/Classes/GCPopMenuConfig.h; sourceTree = "<group>"; };
+		50D51C7396B2277D57A90114FB9B3D4C /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		534193BC62F2F2855AD44E6B734B430C /* GCAssistWindow-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GCAssistWindow-dummy.m"; sourceTree = "<group>"; };
 		561B334D3AEC7B8BBF6DC84E2F653A8D /* Pods-GCPopMenuView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GCPopMenuView_Tests.modulemap"; sourceTree = "<group>"; };
+		58F8FF902B0A9AED12A0E8C808CB87B8 /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
+		5AB286110969DD0AE57A2852737FCCC3 /* FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
 		5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C9FD8B26E174DA4940299426430B833 /* FBSnapshotTestCase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-umbrella.h"; sourceTree = "<group>"; };
 		5E595099697C69AAD8A7EE4D12CFA760 /* Pods-GCPopMenuView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GCPopMenuView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		5E601BD54DA9BF4071437E60125281FA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		656116C8FA5458F45D4707110C9530EC /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
-		672E4C7F9B03BFC9102129A32D719ADF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		6ABB3EB3CCC5BCA82F40FE8DC87BB778 /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
-		716A9972B9D9103B54DB950893FAF104 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		629C2A845988891B5DDE7CB9EB2EBA8F /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.m"; sourceTree = "<group>"; };
+		6BD3368CE31DDF27B9173EC3188AA3F8 /* GCPopMenuView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GCPopMenuView.release.xcconfig; sourceTree = "<group>"; };
 		74BAC57A61816EEB3E67B590EE7FEE7D /* Pods-GCPopMenuView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GCPopMenuView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		789985329FD0BCA0BC0A5DDDF6E1D94C /* GCPopMenuView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = GCPopMenuView.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		7BD4ED544B638D07C7D755AF1C27116A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7E1B7EA746BF6557FD565BAE12AF9198 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestController.m; path = FBSnapshotTestCase/FBSnapshotTestController.m; sourceTree = "<group>"; };
-		7FEC5BD7B14311123A58608FE8624D34 /* GCPopMenuView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GCPopMenuView.release.xcconfig; sourceTree = "<group>"; };
+		779C5BFB544A6E7C576BA75F4BF5B770 /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
+		7C42CB601D9C8DBE5D4D22DF3A868F04 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
+		7C5E030AF64026860B9549F4F06E736B /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DD6144729B4BCCD46A65A182F2214BB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7F04733EBBDCE24D83600AB93A22C0DE /* GCPopMenuArrow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCPopMenuArrow.h; path = GCPopMenuView/Classes/GCPopMenuArrow.h; sourceTree = "<group>"; };
+		834B6A1382E40FA1C9F05F4B96EE4296 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		848E7857D61CFB5101A9AF80AEE1EE47 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		84E14D3C13F7FA77F95C514714F0B46D /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
+		856092FFA94FC2B0DA39674A0B0090FC /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
 		8663522590F6EE5081F73FAA8AFE8DA2 /* Pods-GCPopMenuView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GCPopMenuView_Example.modulemap"; sourceTree = "<group>"; };
 		884C8C3170ACB495E7B9C1273C875993 /* GCPopMenuView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GCPopMenuView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		88B1DEEBF6316A84D7413645212492FF /* FBSnapshotTestCasePlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCasePlatform.h; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.h; sourceTree = "<group>"; };
 		891CDE9604A526340666FC5D3EEFF074 /* Pods-GCPopMenuView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GCPopMenuView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		8CAA89EEF1039078430D7A886477E365 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		8E5923010B02074CAA9AAF6EA02D66AA /* FBSnapshotTestCase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-umbrella.h"; sourceTree = "<group>"; };
-		9468E867498BBAF36F9AFFE4845F8B09 /* FBSnapshotTestCase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.debug.xcconfig; sourceTree = "<group>"; };
-		947994F83EE6E6DB469C1F6FADF63AF2 /* GCPopMenuView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GCPopMenuView.debug.xcconfig; sourceTree = "<group>"; };
-		96187BF3038121CC146335E9FF0B0AFF /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Diff.h"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.h"; sourceTree = "<group>"; };
-		99A67367E018411D614EC8536A8A1C5B /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
+		8CC77AB1CBBA7C910CD264D6384C6C77 /* Masonry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.release.xcconfig; sourceTree = "<group>"; };
+		97E26EF459F3273CA11FBDDB3D9272F9 /* GCPopMenuView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GCPopMenuView-umbrella.h"; sourceTree = "<group>"; };
+		9860B2CE2BC5F5D730D3896E1DDFF3E2 /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCase.m; path = FBSnapshotTestCase/FBSnapshotTestCase.m; sourceTree = "<group>"; };
+		9CC58A806A3D9727CD61B3136B18AF55 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		9D2CD918B3F2732D5B7721BF221E6E1F /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9FED63450E666D9B40E0551DDE5ED303 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
 		A48FC285455289D357F1C63DEDD40D83 /* Pods_GCPopMenuView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GCPopMenuView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6136D0DBEF3E112D1DC62D107A810C3 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
 		A6E67AAD3FDFB229A002DF4495A3A039 /* Pods-GCPopMenuView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GCPopMenuView_Example-dummy.m"; sourceTree = "<group>"; };
-		AE9FF9459FBCDC4AF88FB6B5A4CC1439 /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
-		B7103CA00AED20722C5B69CA5B4F6938 /* FBSnapshotTestCase-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FBSnapshotTestCase-Info.plist"; sourceTree = "<group>"; };
-		C452FB6737137C040329AB288DF10E8B /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = GCPopMenuView/Classes/ReplaceMe.m; sourceTree = "<group>"; };
-		C6AA941EA80078317CA97728FCA3B2CF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		B0E2013099E1E3C77C17C51AEDCDB2A0 /* GCPopMenuView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GCPopMenuView-dummy.m"; sourceTree = "<group>"; };
+		B368A91A965C05A1F7F4CBC2B29AD24A /* FBSnapshotTestCase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.debug.xcconfig; sourceTree = "<group>"; };
+		B533A25462E80326604E226386892AFB /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = GCAssistWindow/Classes/ReplaceMe.m; sourceTree = "<group>"; };
+		B53EB5133A85E71DC07D901E0C3F5DBC /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
+		B9CBFB914C1B2FD71453C3E8AE8880B4 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
+		BDD6106BD1B0170E92F41C8A8B8A7B72 /* GCAssistWindow-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GCAssistWindow-umbrella.h"; sourceTree = "<group>"; };
+		BFB58E20D172C49FE4A9A8B100C0E133 /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
+		BFBF13BBAD71875D0F1FE17B682E62AC /* GCAssistWindow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GCAssistWindow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C013E1F32FD9B10BD465B83BDCD49E75 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		C0A4CC6E3FF34E7A16B04FAA146C27E2 /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
+		C7B75D5B9FA9CCACBE093BD81AD8B52E /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
 		CA25612E9F1668B185C2F53546DA3387 /* Pods-GCPopMenuView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GCPopMenuView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		CA6C439FD250B381957EF0A44706B0DF /* GCPopMenuView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GCPopMenuView-Info.plist"; sourceTree = "<group>"; };
-		CBFF6C5FD9C3A84274A9314D3E940B6E /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
+		CA7E12555E37C4F89760D9DFC380FC89 /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
+		CE161F1EFC12B749E76B746E5BF54898 /* GCPopMenuView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GCPopMenuView-prefix.pch"; sourceTree = "<group>"; };
+		CE33C0727278283F978B77234622E308 /* Masonry-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-umbrella.h"; sourceTree = "<group>"; };
 		CEBA62A469A45FC1C68CB9F953AFE8E5 /* Pods-GCPopMenuView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GCPopMenuView_Tests-dummy.m"; sourceTree = "<group>"; };
-		D08CEBB9BDD9EF7A662ECFC0305C169E /* FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
+		CF044D212769BD77086EE477463D13CF /* Masonry-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Masonry-Info.plist"; sourceTree = "<group>"; };
+		D2B428CA0521A241A92FBE6EA2AA7D36 /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
 		D3886BD900521F1795FF372107F3068F /* Pods-GCPopMenuView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GCPopMenuView_Example-frameworks.sh"; sourceTree = "<group>"; };
-		D872A3EE224412D4057C234FBC629F9C /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
+		D7094AE5CE8EA8D49F95520EB1272D3D /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
+		D75DBF6E67E4A5C2247E4142C795FC56 /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
+		D7B73F7081B9FB5372AAED3DB61750EA /* GCPopMenuArrow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCPopMenuArrow.m; path = GCPopMenuView/Classes/GCPopMenuArrow.m; sourceTree = "<group>"; };
+		D7EDCE0D65B76BA56E0403CB4157D3D3 /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
+		D8B2C41DC9182A8B40FC4C78B1657FEF /* GCPopMenuView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GCPopMenuView-Info.plist"; sourceTree = "<group>"; };
+		D8B609177955B62A209A1390F4E17EE2 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestController.m; path = FBSnapshotTestCase/FBSnapshotTestController.m; sourceTree = "<group>"; };
 		DA88D6AF7F460A8A1904F28D2F1616EC /* Pods-GCPopMenuView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GCPopMenuView_Tests-umbrella.h"; sourceTree = "<group>"; };
-		DC43D94A39CA941ED01E9F7774D1853E /* GCPopMenuView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GCPopMenuView-prefix.pch"; sourceTree = "<group>"; };
+		DDC254C14BA833746FDFF21B168B1238 /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Diff.h"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.h"; sourceTree = "<group>"; };
+		DE338E82EE9E2DEFFA2B6BF5ED78C990 /* UIApplication+StrictKeyWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+StrictKeyWindow.m"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.m"; sourceTree = "<group>"; };
+		DFE5DA32F75095B8EC09C9EA0766D81B /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
+		E0A69326049287E6C1CA0023181C1543 /* GCAssistWindow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GCAssistWindow.debug.xcconfig; sourceTree = "<group>"; };
 		E0FCDF8FA6475676EB4D182EC45A55B6 /* Pods-GCPopMenuView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GCPopMenuView_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		E4824B9C24F3A35000FF959F /* GCPopMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCPopMenuItem.h; path = Example/GCPopMenuView/GCPopMenuItem.h; sourceTree = "<group>"; };
-		E4824B9D24F3A35000FF959F /* GCPopMenuArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCPopMenuArrow.h; path = Example/GCPopMenuView/GCPopMenuArrow.h; sourceTree = "<group>"; };
-		E4824B9E24F3A35000FF959F /* GCPopMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCPopMenuCell.m; path = Example/GCPopMenuView/GCPopMenuCell.m; sourceTree = "<group>"; };
-		E4824B9F24F3A35000FF959F /* UIView+GC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+GC.m"; path = "Example/GCPopMenuView/UIView+GC.m"; sourceTree = "<group>"; };
-		E4824BA024F3A35000FF959F /* GCPopMenuConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCPopMenuConfig.m; path = Example/GCPopMenuView/GCPopMenuConfig.m; sourceTree = "<group>"; };
-		E4824BA124F3A35100FF959F /* GCPopMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCPopMenuView.m; path = Example/GCPopMenuView/GCPopMenuView.m; sourceTree = "<group>"; };
-		E4824BA224F3A35100FF959F /* GCPopMenuArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCPopMenuArrow.m; path = Example/GCPopMenuView/GCPopMenuArrow.m; sourceTree = "<group>"; };
-		E4824BA324F3A35100FF959F /* GCPopMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCPopMenuCell.h; path = Example/GCPopMenuView/GCPopMenuCell.h; sourceTree = "<group>"; };
-		E4824BA424F3A35100FF959F /* GCPopMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCPopMenuItem.m; path = Example/GCPopMenuView/GCPopMenuItem.m; sourceTree = "<group>"; };
-		E4824BA524F3A35100FF959F /* GCPopMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCPopMenuView.h; path = Example/GCPopMenuView/GCPopMenuView.h; sourceTree = "<group>"; };
-		E4824BA624F3A35100FF959F /* UIView+GC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+GC.h"; path = "Example/GCPopMenuView/UIView+GC.h"; sourceTree = "<group>"; };
-		E4824BA724F3A35100FF959F /* GCPopMenuConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCPopMenuConfig.h; path = Example/GCPopMenuView/GCPopMenuConfig.h; sourceTree = "<group>"; };
+		E30A1DA2B0702D887E1AED51E8A9ED73 /* FBSnapshotTestCasePlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCasePlatform.h; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.h; sourceTree = "<group>"; };
+		E387373D5985791A8DDBA13C2F0C1F4C /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
+		E4824BC824F3B57E00FF959F /* UIView+GC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+GC.m"; path = "GCPopMenuView/Classes/UIView+GC.m"; sourceTree = "<group>"; };
+		E4824BC924F3B57E00FF959F /* UIView+GC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+GC.h"; path = "GCPopMenuView/Classes/UIView+GC.h"; sourceTree = "<group>"; };
 		E5A6E151AD931B6189D004D32A05E9DE /* Pods_GCPopMenuView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GCPopMenuView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E91730F005C772B23BE3C966363A55BA /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		E9F49D7D3917A1D3F437379FF67EEF5E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		EA5D77C546B301543C64F5CB9FFBFF60 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		EDA48CEA5AF4B1DB1BE661C40616DC6B /* FBSnapshotTestCase-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FBSnapshotTestCase-Info.plist"; sourceTree = "<group>"; };
+		EE2A06DDBC2CD62D5A744FEA5F78D549 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		EF073151E41B243A3B0B468764352054 /* Pods-GCPopMenuView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GCPopMenuView_Example-umbrella.h"; sourceTree = "<group>"; };
 		F51E2D3976518A6FDB653282BA7D959B /* Pods-GCPopMenuView_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GCPopMenuView_Example-Info.plist"; sourceTree = "<group>"; };
-		FEE661E58CA6655B39AA49AA4C021C33 /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
+		F58052AFF26EC5A3C972B18786C66984 /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
+		F7281EBCBD2A4A7EF2B65B4BB6EC608A /* GCAssistWindowManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCAssistWindowManager.h; path = GCAssistWindow/Classes/GCAssistWindowManager.h; sourceTree = "<group>"; };
+		F82A09D959B1A6A4D2234D1F2F53E67C /* GCAssistWindow-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GCAssistWindow-prefix.pch"; sourceTree = "<group>"; };
+		F92E77CC219D585D7B6659710CDC9839 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		FB0BC2F1AA1ED77112701FE706973605 /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
+		FEE84935DF92D5D3F437CF0713F7309B /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
+		FFEFA34F4244BD5531CC2EAEC11B6FDD /* GCAssistWindow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GCAssistWindow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		085ED0663033ACE5144B7752D47DD37E /* Frameworks */ = {
+		51705021A76A44B224E7A5A67AAD5F5F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B10885D0B6B0020A5E5F702A87B41DF0 /* Foundation.framework in Frameworks */,
+				875B66DFC773F3D667819E6A0292934D /* Foundation.framework in Frameworks */,
+				6143B920886DEAA1F3C6EB28E045AC8C /* GCAssistWindow.framework in Frameworks */,
+				DE61C6BF562E349978BBD3C97C3E2C8D /* Masonry.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6C91843102475E088F530DFDF4FF0B1E /* Frameworks */ = {
+		75249EF863CC7C76EB26DECC4FFC958C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4347FC9523B65A3855E32ACCBFDDEC6 /* Foundation.framework in Frameworks */,
+				A126CFC9B38EA9FC31F46155EE1B1398 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD50500432B324CEEBEE50208EAC9D0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				747E922C28B5770739612369234421B0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,9 +308,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ED7FE598CEB309AC13258D08FC7204E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C923261B53ECF286382C25B30C6B3081 /* Foundation.framework in Frameworks */,
+				C30F12251CE9B80776CDC13A3C5194F4 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E29498916A6216B99A999DA89AC3D17 /* FBSnapshotTestCase */ = {
+			isa = PBXGroup;
+			children = (
+				6029F790F464FDB8D5D6681A875A9682 /* Core */,
+				75CDD84F9FE0F87ED73D11D3525865C2 /* Support Files */,
+				E707FA4A2D4EB1CC387E16D4857D2DC3 /* SwiftSupport */,
+			);
+			path = FBSnapshotTestCase;
+			sourceTree = "<group>";
+		};
 		1BD4349E23A415C19A552EE0BE515A18 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,77 +339,105 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		4BA2479549DD918290454B1CDCD0B92B /* Core */ = {
+		5A7385523CD6C7201AFA9C39DEE55E41 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FEE661E58CA6655B39AA49AA4C021C33 /* FBSnapshotTestCase.h */,
-				277B6BE10C665F515606A22FD60C6DCC /* FBSnapshotTestCase.m */,
-				88B1DEEBF6316A84D7413645212492FF /* FBSnapshotTestCasePlatform.h */,
-				6ABB3EB3CCC5BCA82F40FE8DC87BB778 /* FBSnapshotTestCasePlatform.m */,
-				AE9FF9459FBCDC4AF88FB6B5A4CC1439 /* FBSnapshotTestController.h */,
-				7E1B7EA746BF6557FD565BAE12AF9198 /* FBSnapshotTestController.m */,
-				99A67367E018411D614EC8536A8A1C5B /* UIApplication+StrictKeyWindow.h */,
-				0F538C426803AE34255FC6E35B408CCA /* UIApplication+StrictKeyWindow.m */,
-				656116C8FA5458F45D4707110C9530EC /* UIImage+Compare.h */,
-				235A78CFFA6D8B8D86CACD733531CB13 /* UIImage+Compare.m */,
-				96187BF3038121CC146335E9FF0B0AFF /* UIImage+Diff.h */,
-				4568279DE47DC3AB91598E1317503995 /* UIImage+Diff.m */,
-				284833D18C244D2B42966B6EE425AA59 /* UIImage+Snapshot.h */,
-				D872A3EE224412D4057C234FBC629F9C /* UIImage+Snapshot.m */,
+				B94A88BFEE1218785F367586EE22219A /* GCPopMenuView */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		6029F790F464FDB8D5D6681A875A9682 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BFB58E20D172C49FE4A9A8B100C0E133 /* FBSnapshotTestCase.h */,
+				9860B2CE2BC5F5D730D3896E1DDFF3E2 /* FBSnapshotTestCase.m */,
+				E30A1DA2B0702D887E1AED51E8A9ED73 /* FBSnapshotTestCasePlatform.h */,
+				B53EB5133A85E71DC07D901E0C3F5DBC /* FBSnapshotTestCasePlatform.m */,
+				DFE5DA32F75095B8EC09C9EA0766D81B /* FBSnapshotTestController.h */,
+				D8B609177955B62A209A1390F4E17EE2 /* FBSnapshotTestController.m */,
+				D7094AE5CE8EA8D49F95520EB1272D3D /* UIApplication+StrictKeyWindow.h */,
+				DE338E82EE9E2DEFFA2B6BF5ED78C990 /* UIApplication+StrictKeyWindow.m */,
+				F58052AFF26EC5A3C972B18786C66984 /* UIImage+Compare.h */,
+				629C2A845988891B5DDE7CB9EB2EBA8F /* UIImage+Compare.m */,
+				DDC254C14BA833746FDFF21B168B1238 /* UIImage+Diff.h */,
+				CA7E12555E37C4F89760D9DFC380FC89 /* UIImage+Diff.m */,
+				B9CBFB914C1B2FD71453C3E8AE8880B4 /* UIImage+Snapshot.h */,
+				58F8FF902B0A9AED12A0E8C808CB87B8 /* UIImage+Snapshot.m */,
 			);
 			name = Core;
 			sourceTree = "<group>";
 		};
-		548D151541BD9242D544E0A33DA41E57 /* Pod */ = {
+		75CDD84F9FE0F87ED73D11D3525865C2 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				789985329FD0BCA0BC0A5DDDF6E1D94C /* GCPopMenuView.podspec */,
-				C6AA941EA80078317CA97728FCA3B2CF /* LICENSE */,
-				672E4C7F9B03BFC9102129A32D719ADF /* README.md */,
+				322BC39000BA587B1C79FEA38487FA09 /* FBSnapshotTestCase.modulemap */,
+				02BEDFEAB90AF373803AB7321C8C8522 /* FBSnapshotTestCase-dummy.m */,
+				EDA48CEA5AF4B1DB1BE661C40616DC6B /* FBSnapshotTestCase-Info.plist */,
+				5AB286110969DD0AE57A2852737FCCC3 /* FBSnapshotTestCase-prefix.pch */,
+				5C9FD8B26E174DA4940299426430B833 /* FBSnapshotTestCase-umbrella.h */,
+				B368A91A965C05A1F7F4CBC2B29AD24A /* FBSnapshotTestCase.debug.xcconfig */,
+				24B67CFCCFB8B6FDC1549C923603F432 /* FBSnapshotTestCase.release.xcconfig */,
 			);
-			name = Pod;
+			name = "Support Files";
+			path = "../Target Support Files/FBSnapshotTestCase";
 			sourceTree = "<group>";
 		};
-		6148361D1E34ACA244DABD078435C527 /* Support Files */ = {
+		82CDE6CBB3CEB69EA6A22CAA53BB2BC0 /* GCAssistWindow */ = {
 			isa = PBXGroup;
 			children = (
-				52286DCFBFC50D87CBFD44C875E71722 /* GCPopMenuView.modulemap */,
-				0173E7ADD67F8F0751B8B61FFF90B964 /* GCPopMenuView-dummy.m */,
-				CA6C439FD250B381957EF0A44706B0DF /* GCPopMenuView-Info.plist */,
-				DC43D94A39CA941ED01E9F7774D1853E /* GCPopMenuView-prefix.pch */,
-				3E942CEE8EC33C25B90B49AFD4E8B7F7 /* GCPopMenuView-umbrella.h */,
-				947994F83EE6E6DB469C1F6FADF63AF2 /* GCPopMenuView.debug.xcconfig */,
-				7FEC5BD7B14311123A58608FE8624D34 /* GCPopMenuView.release.xcconfig */,
+				F7281EBCBD2A4A7EF2B65B4BB6EC608A /* GCAssistWindowManager.h */,
+				4EC1082FB6EB8778C7896E875759C26E /* GCAssistWindowManager.m */,
+				B533A25462E80326604E226386892AFB /* ReplaceMe.m */,
+				F1470872FBB15CC53F5804699F3A14F4 /* Support Files */,
+			);
+			path = GCAssistWindow;
+			sourceTree = "<group>";
+		};
+		84AB57B812359ED67D0864BBE275F7FF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				36D04E60EE12C9C2457DCFFC211A7069 /* GCPopMenuView.modulemap */,
+				B0E2013099E1E3C77C17C51AEDCDB2A0 /* GCPopMenuView-dummy.m */,
+				D8B2C41DC9182A8B40FC4C78B1657FEF /* GCPopMenuView-Info.plist */,
+				CE161F1EFC12B749E76B746E5BF54898 /* GCPopMenuView-prefix.pch */,
+				97E26EF459F3273CA11FBDDB3D9272F9 /* GCPopMenuView-umbrella.h */,
+				152464B8E0236D10F534DED4CAC03895 /* GCPopMenuView.debug.xcconfig */,
+				6BD3368CE31DDF27B9173EC3188AA3F8 /* GCPopMenuView.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/GCPopMenuView";
 			sourceTree = "<group>";
 		};
-		7DE5752EED0A4C4A430975244947611A /* iOS */ = {
+		86F5E6F475E7843B7CB4BAF8A891BFC2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7BD4ED544B638D07C7D755AF1C27116A /* Foundation.framework */,
-				716A9972B9D9103B54DB950893FAF104 /* QuartzCore.framework */,
-				8CAA89EEF1039078430D7A886477E365 /* UIKit.framework */,
-				5E601BD54DA9BF4071437E60125281FA /* XCTest.framework */,
+				FFEFA34F4244BD5531CC2EAEC11B6FDD /* GCAssistWindow.framework */,
+				7C5E030AF64026860B9549F4F06E736B /* Masonry.framework */,
+				8E941C0E2390BC60876FC605F16CF158 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8D76762482CC44EAA24FBD15B820CABB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0E29498916A6216B99A999DA89AC3D17 /* FBSnapshotTestCase */,
+				82CDE6CBB3CEB69EA6A22CAA53BB2BC0 /* GCAssistWindow */,
+				DA761044BBF44477A521F642ECE7F2B6 /* Masonry */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8E941C0E2390BC60876FC605F16CF158 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				7DD6144729B4BCCD46A65A182F2214BB /* Foundation.framework */,
+				15EC77296767C1245DA0E82CCB963496 /* QuartzCore.framework */,
+				EA5D77C546B301543C64F5CB9FFBFF60 /* UIKit.framework */,
+				1CF03571FF6096D0F67406744D1A66E7 /* XCTest.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		8A59250FC457F552FB22868997F6D526 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				ECE3AAFBA5B01AEE3BF4CC5CC6B9C30D /* GCPopMenuView */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		906402ECC4C6C5EB58DD365FD2C64E92 /* SwiftSupport */ = {
-			isa = PBXGroup;
-			children = (
-				3F0D66CF296ABBC57EC4D0452397E235 /* SwiftSupport.swift */,
-			);
-			name = SwiftSupport;
 			sourceTree = "<group>";
 		};
 		93148C64B2CD2E4403E68EA11D302B2B /* Pods-GCPopMenuView_Tests */ = {
@@ -289,38 +457,37 @@
 			path = "Target Support Files/Pods-GCPopMenuView_Tests";
 			sourceTree = "<group>";
 		};
-		A9F916E6F29A7F971811C4F4FCEC4FE8 /* Products */ = {
+		9FB8AE2B0E1259470EA9A58C3F5A4D04 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase.framework */,
-				884C8C3170ACB495E7B9C1273C875993 /* GCPopMenuView.framework */,
-				A48FC285455289D357F1C63DEDD40D83 /* Pods_GCPopMenuView_Example.framework */,
-				E5A6E151AD931B6189D004D32A05E9DE /* Pods_GCPopMenuView_Tests.framework */,
+				209105F26CFC82AD9C5C35D5047621FE /* GCPopMenuView.podspec */,
+				848E7857D61CFB5101A9AF80AEE1EE47 /* LICENSE */,
+				E9F49D7D3917A1D3F437379FF67EEF5E /* README.md */,
 			);
-			name = Products;
+			name = Pod;
 			sourceTree = "<group>";
 		};
-		B69B2ECE2D2C9A3924A9231138CE0BBC /* Support Files */ = {
+		B94A88BFEE1218785F367586EE22219A /* GCPopMenuView */ = {
 			isa = PBXGroup;
 			children = (
-				CBFF6C5FD9C3A84274A9314D3E940B6E /* FBSnapshotTestCase.modulemap */,
-				1ADA6E655DC84D06359BD0ED5E36C783 /* FBSnapshotTestCase-dummy.m */,
-				B7103CA00AED20722C5B69CA5B4F6938 /* FBSnapshotTestCase-Info.plist */,
-				D08CEBB9BDD9EF7A662ECFC0305C169E /* FBSnapshotTestCase-prefix.pch */,
-				8E5923010B02074CAA9AAF6EA02D66AA /* FBSnapshotTestCase-umbrella.h */,
-				9468E867498BBAF36F9AFFE4845F8B09 /* FBSnapshotTestCase.debug.xcconfig */,
-				4C6513B09838318BD763CFD5390D1DE0 /* FBSnapshotTestCase.release.xcconfig */,
+				7F04733EBBDCE24D83600AB93A22C0DE /* GCPopMenuArrow.h */,
+				D7B73F7081B9FB5372AAED3DB61750EA /* GCPopMenuArrow.m */,
+				48C996B8ADC57D1F9D321F42E1ADDC01 /* GCPopMenuCell.h */,
+				07D57DA80DE9A15FCBAABE5439CFF5B0 /* GCPopMenuCell.m */,
+				4FC049CDB1FF8F4E5CC058B1A4B0DFE9 /* GCPopMenuConfig.h */,
+				15A3CC04851F63848A2B633F3F42F4E9 /* GCPopMenuConfig.m */,
+				2D2A573225CB710983C0A01544CA3EBF /* GCPopMenuItem.h */,
+				0DC59C31398848D43E24F3DD40553FA3 /* GCPopMenuItem.m */,
+				221D61D8C7FF89F397C63FB09D185D33 /* GCPopMenuView.h */,
+				37B60FC5662950A75D37D64EE5C5D7AA /* GCPopMenuView.m */,
+				E4824BC924F3B57E00FF959F /* UIView+GC.h */,
+				E4824BC824F3B57E00FF959F /* UIView+GC.m */,
+				3C003A1DC317E92C02A08AD31F79F76C /* ReplaceMe.m */,
+				9FB8AE2B0E1259470EA9A58C3F5A4D04 /* Pod */,
+				84AB57B812359ED67D0864BBE275F7FF /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/FBSnapshotTestCase";
-			sourceTree = "<group>";
-		};
-		BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7DE5752EED0A4C4A430975244947611A /* iOS */,
-			);
-			name = Frameworks;
+			name = GCPopMenuView;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		BC0B971D5F0E200C73334E06DFFA5741 /* Pods-GCPopMenuView_Example */ = {
@@ -340,62 +507,122 @@
 			path = "Target Support Files/Pods-GCPopMenuView_Example";
 			sourceTree = "<group>";
 		};
-		BD2D60DE56CBB8C87BA07E0C1CCD0592 /* FBSnapshotTestCase */ = {
+		CC115317AA3E63A775466AD5AE8BEB46 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4BA2479549DD918290454B1CDCD0B92B /* Core */,
-				B69B2ECE2D2C9A3924A9231138CE0BBC /* Support Files */,
-				906402ECC4C6C5EB58DD365FD2C64E92 /* SwiftSupport */,
+				5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase.framework */,
+				BFBF13BBAD71875D0F1FE17B682E62AC /* GCAssistWindow.framework */,
+				884C8C3170ACB495E7B9C1273C875993 /* GCPopMenuView.framework */,
+				1FFED36A657123030ABB700256D73F15 /* Masonry.framework */,
+				A48FC285455289D357F1C63DEDD40D83 /* Pods_GCPopMenuView_Example.framework */,
+				E5A6E151AD931B6189D004D32A05E9DE /* Pods_GCPopMenuView_Tests.framework */,
 			);
-			path = FBSnapshotTestCase;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				8A59250FC457F552FB22868997F6D526 /* Development Pods */,
-				BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */,
-				E81A37DBDE41E671312C56736544E2FA /* Pods */,
-				A9F916E6F29A7F971811C4F4FCEC4FE8 /* Products */,
+				5A7385523CD6C7201AFA9C39DEE55E41 /* Development Pods */,
+				86F5E6F475E7843B7CB4BAF8A891BFC2 /* Frameworks */,
+				8D76762482CC44EAA24FBD15B820CABB /* Pods */,
+				CC115317AA3E63A775466AD5AE8BEB46 /* Products */,
 				1BD4349E23A415C19A552EE0BE515A18 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		E81A37DBDE41E671312C56736544E2FA /* Pods */ = {
+		DA761044BBF44477A521F642ECE7F2B6 /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
-				BD2D60DE56CBB8C87BA07E0C1CCD0592 /* FBSnapshotTestCase */,
+				E387373D5985791A8DDBA13C2F0C1F4C /* MASCompositeConstraint.h */,
+				7C42CB601D9C8DBE5D4D22DF3A868F04 /* MASCompositeConstraint.m */,
+				FB0BC2F1AA1ED77112701FE706973605 /* MASConstraint.h */,
+				C7B75D5B9FA9CCACBE093BD81AD8B52E /* MASConstraint.m */,
+				3178F9486F1712933F1FAB4673393C3A /* MASConstraint+Private.h */,
+				03480EE98EC308067AAAE2DC0484A272 /* MASConstraintMaker.h */,
+				33A26B338691CB59413EBFA32F1EE108 /* MASConstraintMaker.m */,
+				9FED63450E666D9B40E0551DDE5ED303 /* MASLayoutConstraint.h */,
+				10E0E3DDB26F4080079AE46D79B020AE /* MASLayoutConstraint.m */,
+				08D53EDBD502807588429AF152D18C34 /* Masonry.h */,
+				856092FFA94FC2B0DA39674A0B0090FC /* MASUtilities.h */,
+				84E14D3C13F7FA77F95C514714F0B46D /* MASViewAttribute.h */,
+				D2B428CA0521A241A92FBE6EA2AA7D36 /* MASViewAttribute.m */,
+				9D2CD918B3F2732D5B7721BF221E6E1F /* MASViewConstraint.h */,
+				D7EDCE0D65B76BA56E0403CB4157D3D3 /* MASViewConstraint.m */,
+				F92E77CC219D585D7B6659710CDC9839 /* NSArray+MASAdditions.h */,
+				9CC58A806A3D9727CD61B3136B18AF55 /* NSArray+MASAdditions.m */,
+				E91730F005C772B23BE3C966363A55BA /* NSArray+MASShorthandAdditions.h */,
+				357D4708DC3D51E44BFBB06B7A298DCA /* NSLayoutConstraint+MASDebugAdditions.h */,
+				50D51C7396B2277D57A90114FB9B3D4C /* NSLayoutConstraint+MASDebugAdditions.m */,
+				D75DBF6E67E4A5C2247E4142C795FC56 /* View+MASAdditions.h */,
+				C0A4CC6E3FF34E7A16B04FAA146C27E2 /* View+MASAdditions.m */,
+				C013E1F32FD9B10BD465B83BDCD49E75 /* View+MASShorthandAdditions.h */,
+				834B6A1382E40FA1C9F05F4B96EE4296 /* ViewController+MASAdditions.h */,
+				EE2A06DDBC2CD62D5A744FEA5F78D549 /* ViewController+MASAdditions.m */,
+				E5341E8A895092472CFDC779C388F82D /* Support Files */,
 			);
-			name = Pods;
+			path = Masonry;
 			sourceTree = "<group>";
 		};
-		ECE3AAFBA5B01AEE3BF4CC5CC6B9C30D /* GCPopMenuView */ = {
+		E5341E8A895092472CFDC779C388F82D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E4824BA524F3A35100FF959F /* GCPopMenuView.h */,
-				E4824BA124F3A35100FF959F /* GCPopMenuView.m */,
-				E4824BA724F3A35100FF959F /* GCPopMenuConfig.h */,
-				E4824BA024F3A35000FF959F /* GCPopMenuConfig.m */,
-				E4824BA324F3A35100FF959F /* GCPopMenuCell.h */,
-				E4824B9E24F3A35000FF959F /* GCPopMenuCell.m */,
-				E4824B9C24F3A35000FF959F /* GCPopMenuItem.h */,
-				E4824BA424F3A35100FF959F /* GCPopMenuItem.m */,
-				E4824B9D24F3A35000FF959F /* GCPopMenuArrow.h */,
-				E4824BA224F3A35100FF959F /* GCPopMenuArrow.m */,
-				E4824BA624F3A35100FF959F /* UIView+GC.h */,
-				E4824B9F24F3A35000FF959F /* UIView+GC.m */,
-				C452FB6737137C040329AB288DF10E8B /* ReplaceMe.m */,
-				548D151541BD9242D544E0A33DA41E57 /* Pod */,
-				6148361D1E34ACA244DABD078435C527 /* Support Files */,
+				1F88F8D6F151EACFE67EA7D0BECA1983 /* Masonry.modulemap */,
+				779C5BFB544A6E7C576BA75F4BF5B770 /* Masonry-dummy.m */,
+				CF044D212769BD77086EE477463D13CF /* Masonry-Info.plist */,
+				FEE84935DF92D5D3F437CF0713F7309B /* Masonry-prefix.pch */,
+				CE33C0727278283F978B77234622E308 /* Masonry-umbrella.h */,
+				097B876E219D707455822F10073565C5 /* Masonry.debug.xcconfig */,
+				8CC77AB1CBBA7C910CD264D6384C6C77 /* Masonry.release.xcconfig */,
 			);
-			name = GCPopMenuView;
-			path = ../..;
+			name = "Support Files";
+			path = "../Target Support Files/Masonry";
+			sourceTree = "<group>";
+		};
+		E707FA4A2D4EB1CC387E16D4857D2DC3 /* SwiftSupport */ = {
+			isa = PBXGroup;
+			children = (
+				A6136D0DBEF3E112D1DC62D107A810C3 /* SwiftSupport.swift */,
+			);
+			name = SwiftSupport;
+			sourceTree = "<group>";
+		};
+		F1470872FBB15CC53F5804699F3A14F4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				37387E348C15676D2B342060F0EC7B35 /* GCAssistWindow.modulemap */,
+				534193BC62F2F2855AD44E6B734B430C /* GCAssistWindow-dummy.m */,
+				34A8117E06424199A805979C32ED0248 /* GCAssistWindow-Info.plist */,
+				F82A09D959B1A6A4D2234D1F2F53E67C /* GCAssistWindow-prefix.pch */,
+				BDD6106BD1B0170E92F41C8A8B8A7B72 /* GCAssistWindow-umbrella.h */,
+				E0A69326049287E6C1CA0023181C1543 /* GCAssistWindow.debug.xcconfig */,
+				139C86D2509BC9B67854746081F53450 /* GCAssistWindow.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GCAssistWindow";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		05D996AEF97948D3D96F59D6D0DA06FC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				856BCA75F676A6FD82784FEA018CEDA0 /* Pods-GCPopMenuView_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		066F4A8F0F9A5DB3BBC403FEC3301D9A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B08A5F6D8AAE02716097941DB6DA5535 /* GCAssistWindow-umbrella.h in Headers */,
+				40A94A01FEDCF226816AFDA2E4184A73 /* GCAssistWindowManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0FC3646F12CFBE774CE25FC38592BC4F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -410,34 +637,49 @@
 			files = (
 				F720FAF13A108CE6901E0A8B0580E1E8 /* FBSnapshotTestCase-umbrella.h in Headers */,
 				00224C929D57F45B70E87359E719948D /* FBSnapshotTestCase.h in Headers */,
-				E4824BA824F3A35100FF959F /* GCPopMenuItem.h in Headers */,
 				C49D52712466511E332C952834C81FE1 /* FBSnapshotTestCasePlatform.h in Headers */,
-				E4824BAF24F3A35100FF959F /* GCPopMenuCell.h in Headers */,
-				E4824BB224F3A35100FF959F /* UIView+GC.h in Headers */,
 				90142C6259374E18E640396A59AD379A /* FBSnapshotTestController.h in Headers */,
-				E4824BB324F3A35100FF959F /* GCPopMenuConfig.h in Headers */,
 				40039E0AF0D764360B1D4FC4F7950D2E /* UIApplication+StrictKeyWindow.h in Headers */,
 				F1AAAE00BB32B733B238E2B4E8424506 /* UIImage+Compare.h in Headers */,
 				D04AAC8B22E4A4DC4F39891C4E52F251 /* UIImage+Diff.h in Headers */,
+				E4824BCB24F3B57E00FF959F /* UIView+GC.h in Headers */,
 				B74CD6E6EBEA0B642776BCB37850415D /* UIImage+Snapshot.h in Headers */,
-				E4824BB124F3A35100FF959F /* GCPopMenuView.h in Headers */,
-				E4824BA924F3A35100FF959F /* GCPopMenuArrow.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B5966EE561B31FA0A1DBFC1597CC8DEC /* Headers */ = {
+		38CC515B5581B46FA8301193DB0DF758 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4AF04E2801FCAE454A7B505E748D667 /* GCPopMenuView-umbrella.h in Headers */,
+				6A669573E13B35C628C76BFD61617F8C /* MASCompositeConstraint.h in Headers */,
+				03730C6E379E811BDDE1B3DCB3D2F94E /* MASConstraint+Private.h in Headers */,
+				90E575AB35545092035398C8199851AF /* MASConstraint.h in Headers */,
+				ED61986FD85615F4AE3D0EE7EFB484DE /* MASConstraintMaker.h in Headers */,
+				4C088482845AD3FF0746A921890B4666 /* MASLayoutConstraint.h in Headers */,
+				7F5C5974CF4CCDCF95BC905663699509 /* Masonry-umbrella.h in Headers */,
+				DEA7C8278F96A0A4C9B8580D5A3DD289 /* Masonry.h in Headers */,
+				0032411CC63578288D1E03D629CB1C8D /* MASUtilities.h in Headers */,
+				BDBE272510402FC0995934D50F047008 /* MASViewAttribute.h in Headers */,
+				0A8E993FFC17D8EBFB8C9F2EF474819E /* MASViewConstraint.h in Headers */,
+				54CD273A787280EA588D98A4B1AB916D /* NSArray+MASAdditions.h in Headers */,
+				E332B1D8D4BCB1EFB3E88968417D9C51 /* NSArray+MASShorthandAdditions.h in Headers */,
+				21001FB020160AFBF6D7E2B84666395B /* NSLayoutConstraint+MASDebugAdditions.h in Headers */,
+				199BC30087EE13D48B8CE5AAFB76AF3C /* View+MASAdditions.h in Headers */,
+				0A7FC8A555F113EA6A8FBEF884DAF111 /* View+MASShorthandAdditions.h in Headers */,
+				A69415A0FB4C451CA24AA54F26833D57 /* ViewController+MASAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C7D76F9CACE1680059C216D72823C372 /* Headers */ = {
+		5A3330250570288717569D6E0C2128CB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C8A8047983F88AD03B460A43BA70165 /* Pods-GCPopMenuView_Example-umbrella.h in Headers */,
+				33BC2E0F29AAEC775C8C3C579BF81308 /* GCPopMenuArrow.h in Headers */,
+				D456ECC15F90D9F982065F031091399A /* GCPopMenuCell.h in Headers */,
+				23FADC9AAE9633DFC566700595828F0D /* GCPopMenuConfig.h in Headers */,
+				BCEC2C0F5C59F6D27550DB1CA463E8A7 /* GCPopMenuItem.h in Headers */,
+				1D5C98F7B78FA7D726A57B474F715746 /* GCPopMenuView-umbrella.h in Headers */,
+				A0C167961CADB5EB5FFE8DA9AB1DD5C7 /* GCPopMenuView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,16 +688,18 @@
 /* Begin PBXNativeTarget section */
 		2A7298A26A74E3345F7707E87DAE355F /* GCPopMenuView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2C9977C32C0606A9BAEDBE0EC36B4943 /* Build configuration list for PBXNativeTarget "GCPopMenuView" */;
+			buildConfigurationList = 77BA472CF3DC2254133F253DAF8262C6 /* Build configuration list for PBXNativeTarget "GCPopMenuView" */;
 			buildPhases = (
-				B5966EE561B31FA0A1DBFC1597CC8DEC /* Headers */,
-				E476825C8E258DEEC88C6EEEE39CD992 /* Sources */,
-				6C91843102475E088F530DFDF4FF0B1E /* Frameworks */,
-				C9A90B9EA0EACE32A59FA0A9D16518FF /* Resources */,
+				5A3330250570288717569D6E0C2128CB /* Headers */,
+				3003947BA8DEE1AE848294D0712962A9 /* Sources */,
+				51705021A76A44B224E7A5A67AAD5F5F /* Frameworks */,
+				485188E4EFDB01DF74BFEBA24FB1A517 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4A2D5267912969FC08B80BC86473C158 /* PBXTargetDependency */,
+				6CF39E5DE61642AF7C53F85B0D2FE1A2 /* PBXTargetDependency */,
 			);
 			name = GCPopMenuView;
 			productName = GCPopMenuView;
@@ -464,21 +708,59 @@
 		};
 		348249A8EE728D07BF25263B60F66340 /* Pods-GCPopMenuView_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00FAC5214ACD25EF3B18CFB91AD9DB36 /* Build configuration list for PBXNativeTarget "Pods-GCPopMenuView_Example" */;
+			buildConfigurationList = 31A4DF2CE80AD4D635902B77F0D03333 /* Build configuration list for PBXNativeTarget "Pods-GCPopMenuView_Example" */;
 			buildPhases = (
-				C7D76F9CACE1680059C216D72823C372 /* Headers */,
-				4B6414430D46F7FF45A08820BB6A736D /* Sources */,
-				085ED0663033ACE5144B7752D47DD37E /* Frameworks */,
-				37C7F44CECC0A670C00D3CBB68E94D7E /* Resources */,
+				05D996AEF97948D3D96F59D6D0DA06FC /* Headers */,
+				43E4CF2EFDAA8B297A9586F62CAB87B0 /* Sources */,
+				75249EF863CC7C76EB26DECC4FFC958C /* Frameworks */,
+				89012E596BE5237571B028821C9F6B49 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D503A395D5B4C027639B71C49A3BDCA5 /* PBXTargetDependency */,
+				7F82A742474303AC2E9478515A50E582 /* PBXTargetDependency */,
+				E8CAA02741FBE84592510C33516E5B6A /* PBXTargetDependency */,
+				A3D0EB01C806593D4701248A539BACC4 /* PBXTargetDependency */,
 			);
 			name = "Pods-GCPopMenuView_Example";
 			productName = "Pods-GCPopMenuView_Example";
 			productReference = A48FC285455289D357F1C63DEDD40D83 /* Pods_GCPopMenuView_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		55AF53E6C77A10ED4985E04D74A8878E /* Masonry */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90B15A9C55E3268B9A1CFE18E89B4FE0 /* Build configuration list for PBXNativeTarget "Masonry" */;
+			buildPhases = (
+				38CC515B5581B46FA8301193DB0DF758 /* Headers */,
+				927BC7C85C9C5AAF96548BB2913F8BF4 /* Sources */,
+				ED7FE598CEB309AC13258D08FC7204E7 /* Frameworks */,
+				FD862A7FCF34400D4771B3D37488594B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Masonry;
+			productName = Masonry;
+			productReference = 1FFED36A657123030ABB700256D73F15 /* Masonry.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6808194BD73431E47B43AD5F67AC53C7 /* GCAssistWindow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0CA7E065B62040EBF09507136ADBD5B /* Build configuration list for PBXNativeTarget "GCAssistWindow" */;
+			buildPhases = (
+				066F4A8F0F9A5DB3BBC403FEC3301D9A /* Headers */,
+				760B5AA9CDEAD9273207D9A907BFA152 /* Sources */,
+				AD50500432B324CEEBEE50208EAC9D0D /* Frameworks */,
+				CE584F81BBC6DE319A5775E692466587 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GCAssistWindow;
+			productName = GCAssistWindow;
+			productReference = BFBF13BBAD71875D0F1FE17B682E62AC /* GCAssistWindow.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		98A98149697C80CEF8D5772791E92E66 /* FBSnapshotTestCase */ = {
@@ -537,12 +819,14 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = A9F916E6F29A7F971811C4F4FCEC4FE8 /* Products */;
+			productRefGroup = CC115317AA3E63A775466AD5AE8BEB46 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				98A98149697C80CEF8D5772791E92E66 /* FBSnapshotTestCase */,
+				6808194BD73431E47B43AD5F67AC53C7 /* GCAssistWindow */,
 				2A7298A26A74E3345F7707E87DAE355F /* GCPopMenuView */,
+				55AF53E6C77A10ED4985E04D74A8878E /* Masonry */,
 				348249A8EE728D07BF25263B60F66340 /* Pods-GCPopMenuView_Example */,
 				B9D281B72EF2E24D2D0FF7077F31881D /* Pods-GCPopMenuView_Tests */,
 			);
@@ -550,7 +834,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		37C7F44CECC0A670C00D3CBB68E94D7E /* Resources */ = {
+		485188E4EFDB01DF74BFEBA24FB1A517 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -564,7 +848,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C9A90B9EA0EACE32A59FA0A9D16518FF /* Resources */ = {
+		89012E596BE5237571B028821C9F6B49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE584F81BBC6DE319A5775E692466587 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -578,14 +869,63 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FD862A7FCF34400D4771B3D37488594B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4B6414430D46F7FF45A08820BB6A736D /* Sources */ = {
+		3003947BA8DEE1AE848294D0712962A9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDCD8A0794FBE9C2AFA350E04FAB410E /* Pods-GCPopMenuView_Example-dummy.m in Sources */,
+				198D95958F9B698B7DD9CFF0087549D0 /* GCPopMenuArrow.m in Sources */,
+				F2364CC473BEBEBB787BF00C5BF43782 /* GCPopMenuCell.m in Sources */,
+				5A759334ECEE313137A310235B5599AA /* GCPopMenuConfig.m in Sources */,
+				DDF925F4FFAE24F60A342C9D84A7AB33 /* GCPopMenuItem.m in Sources */,
+				543280B1D6C53EAF350E7FF487C642BA /* GCPopMenuView-dummy.m in Sources */,
+				AF85187145811BD1E6795A3B7E911061 /* GCPopMenuView.m in Sources */,
+				B5EA197CB9ABF96117531413B9373038 /* ReplaceMe.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43E4CF2EFDAA8B297A9586F62CAB87B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20A8580F489B0CE0D3B523472DC3AACD /* Pods-GCPopMenuView_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		760B5AA9CDEAD9273207D9A907BFA152 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7599ABFC630A5FD24962377ED48C83B1 /* GCAssistWindow-dummy.m in Sources */,
+				CC7860D7BCB2C780DEDD1C9C6EA7CFCA /* GCAssistWindowManager.m in Sources */,
+				76175C8EFBE704C6E0415686D3CD2D0D /* ReplaceMe.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		927BC7C85C9C5AAF96548BB2913F8BF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A25DC6832E6F4BDCEF4B533CC298B73A /* MASCompositeConstraint.m in Sources */,
+				F32E6E8110971DAEA61DEA0EC8D5A255 /* MASConstraint.m in Sources */,
+				FCACD5BAACB61D5772BAEABC43938895 /* MASConstraintMaker.m in Sources */,
+				CF38B749AAB9F4DD2C83E5C56812EAEC /* MASLayoutConstraint.m in Sources */,
+				095E578A120FE4C7459E4397FFD0FA8E /* Masonry-dummy.m in Sources */,
+				AA2C37C244578D9A3D4D020CAD9F0CA7 /* MASViewAttribute.m in Sources */,
+				EB0F23D4953438F4935867C83B51EFD7 /* MASViewConstraint.m in Sources */,
+				B67A71CD663BE9F3C40E91A818F7D58B /* NSArray+MASAdditions.m in Sources */,
+				14FFE7B37BBDB80E52FC5BE2DF08733B /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				6ACD28D6A67A4A9E87711B5114C70B12 /* View+MASAdditions.m in Sources */,
+				DCD0F002EDA328A87CDF6FAB3DD30753 /* ViewController+MASAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,20 +933,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4824BAD24F3A35100FF959F /* GCPopMenuView.m in Sources */,
 				6DBC8EB7532E931C2FBDA71D1E0B66A4 /* FBSnapshotTestCase-dummy.m in Sources */,
-				E4824BB024F3A35100FF959F /* GCPopMenuItem.m in Sources */,
 				8CE3BF0ACE07EA42DD5DAC871BF4B767 /* FBSnapshotTestCase.m in Sources */,
-				E4824BAA24F3A35100FF959F /* GCPopMenuCell.m in Sources */,
 				E8AC509D18EBF21B1FEA909652A01108 /* FBSnapshotTestCasePlatform.m in Sources */,
 				88396E68DC05A379282F3B374F75F43C /* FBSnapshotTestController.m in Sources */,
-				E4824BAE24F3A35100FF959F /* GCPopMenuArrow.m in Sources */,
 				9D65089019D558E5A9661F2DCAD20313 /* SwiftSupport.swift in Sources */,
 				11C410135C7E89353B480AC8DE0BFB77 /* UIApplication+StrictKeyWindow.m in Sources */,
+				E4824BCA24F3B57E00FF959F /* UIView+GC.m in Sources */,
 				2DCFF0CE0BD295F1D46D3247F36B192C /* UIImage+Compare.m in Sources */,
-				E4824BAC24F3A35100FF959F /* GCPopMenuConfig.m in Sources */,
 				14AD81D52FAD9CF2C065C61FB00C3B4F /* UIImage+Diff.m in Sources */,
-				E4824BAB24F3A35100FF959F /* UIView+GC.m in Sources */,
 				A525E29E0A8079B35B793D8A2B5FBDF2 /* UIImage+Snapshot.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -619,29 +954,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E476825C8E258DEEC88C6EEEE39CD992 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				77954163DBD8427ED83C91E734F3204D /* GCPopMenuView-dummy.m in Sources */,
-				2DB5FED8B27AC26216EE9B3EAC555A01 /* ReplaceMe.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D503A395D5B4C027639B71C49A3BDCA5 /* PBXTargetDependency */ = {
+		4A2D5267912969FC08B80BC86473C158 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = GCPopMenuView;
-			target = 2A7298A26A74E3345F7707E87DAE355F /* GCPopMenuView */;
-			targetProxy = E05A1E47FE1D3D9B22BCDF1093D0034F /* PBXContainerItemProxy */;
+			name = GCAssistWindow;
+			target = 6808194BD73431E47B43AD5F67AC53C7 /* GCAssistWindow */;
+			targetProxy = 0B36090BD4075D423F39843730BFD1D2 /* PBXContainerItemProxy */;
+		};
+		6CF39E5DE61642AF7C53F85B0D2FE1A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Masonry;
+			target = 55AF53E6C77A10ED4985E04D74A8878E /* Masonry */;
+			targetProxy = 9D7B403AC147E6D698DCB92AA597377B /* PBXContainerItemProxy */;
+		};
+		7F82A742474303AC2E9478515A50E582 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GCAssistWindow;
+			target = 6808194BD73431E47B43AD5F67AC53C7 /* GCAssistWindow */;
+			targetProxy = DC949B043C5D28004E9A1062B8F33235 /* PBXContainerItemProxy */;
+		};
+		A3D0EB01C806593D4701248A539BACC4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Masonry;
+			target = 55AF53E6C77A10ED4985E04D74A8878E /* Masonry */;
+			targetProxy = BB15E0D2427421AA2C30197F19DEA6C1 /* PBXContainerItemProxy */;
 		};
 		D8BF5AC5FA98C51348C6E5D03BE12F85 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-GCPopMenuView_Example";
 			target = 348249A8EE728D07BF25263B60F66340 /* Pods-GCPopMenuView_Example */;
 			targetProxy = 645ABF62849954C8A218AA11C4276794 /* PBXContainerItemProxy */;
+		};
+		E8CAA02741FBE84592510C33516E5B6A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GCPopMenuView;
+			target = 2A7298A26A74E3345F7707E87DAE355F /* GCPopMenuView */;
+			targetProxy = E9C7A53CB23D71C7E4CB884D462B9AE0 /* PBXContainerItemProxy */;
 		};
 		FFA504F588C0CDEE7F9DEAB5DF7B2001 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -652,71 +1002,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		018786B7D98004ED239BDB3458D75FD8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F58C588479B40F8D78D7054B5FDB45C /* Pods-GCPopMenuView_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-GCPopMenuView_Example/Pods-GCPopMenuView_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-GCPopMenuView_Example/Pods-GCPopMenuView_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		0850E473946FCA587E39C4BA6F8669A3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7FEC5BD7B14311123A58608FE8624D34 /* GCPopMenuView.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/GCPopMenuView/GCPopMenuView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GCPopMenuView/GCPopMenuView-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/GCPopMenuView/GCPopMenuView.modulemap";
-				PRODUCT_MODULE_NAME = GCPopMenuView;
-				PRODUCT_NAME = GCPopMenuView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		0CA4945C97DE98DE67B09E4B20E97071 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 891CDE9604A526340666FC5D3EEFF074 /* Pods-GCPopMenuView_Tests.debug.xcconfig */;
@@ -750,9 +1035,137 @@
 			};
 			name = Debug;
 		};
+		13820343DA4185192ECBB9434F9509AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B967175A202E05C7A7ABC8F5687F288 /* Pods-GCPopMenuView_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GCPopMenuView_Example/Pods-GCPopMenuView_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GCPopMenuView_Example/Pods-GCPopMenuView_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		192BF1DEEBA52A5EB331552F2E055C8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BD3368CE31DDF27B9173EC3188AA3F8 /* GCPopMenuView.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GCPopMenuView/GCPopMenuView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GCPopMenuView/GCPopMenuView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GCPopMenuView/GCPopMenuView.modulemap";
+				PRODUCT_MODULE_NAME = GCPopMenuView;
+				PRODUCT_NAME = GCPopMenuView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2E23D271C7D3FC059EE173FDEC6DD99B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 152464B8E0236D10F534DED4CAC03895 /* GCPopMenuView.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GCPopMenuView/GCPopMenuView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GCPopMenuView/GCPopMenuView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GCPopMenuView/GCPopMenuView.modulemap";
+				PRODUCT_MODULE_NAME = GCPopMenuView;
+				PRODUCT_NAME = GCPopMenuView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3D3ADB87A1F0E8CFDFE40970A08EAD63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 097B876E219D707455822F10073565C5 /* Masonry.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Masonry/Masonry-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
+				PRODUCT_MODULE_NAME = Masonry;
+				PRODUCT_NAME = Masonry;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		441C7939108738A0C7CD37CBADE0B85E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9468E867498BBAF36F9AFFE4845F8B09 /* FBSnapshotTestCase.debug.xcconfig */;
+			baseConfigurationReference = B368A91A965C05A1F7F4CBC2B29AD24A /* FBSnapshotTestCase.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -771,6 +1184,37 @@
 				MODULEMAP_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap";
 				PRODUCT_MODULE_NAME = FBSnapshotTestCase;
 				PRODUCT_NAME = FBSnapshotTestCase;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		45862B109D00B6B4823526207113C1A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0A69326049287E6C1CA0023181C1543 /* GCAssistWindow.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GCAssistWindow/GCAssistWindow-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GCAssistWindow/GCAssistWindow-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GCAssistWindow/GCAssistWindow.modulemap";
+				PRODUCT_MODULE_NAME = GCAssistWindow;
+				PRODUCT_NAME = GCAssistWindow;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -874,6 +1318,38 @@
 			};
 			name = Release;
 		};
+		6B60EDC429431E9B295094C1731784C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CC77AB1CBBA7C910CD264D6384C6C77 /* Masonry.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Masonry/Masonry-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
+				PRODUCT_MODULE_NAME = Masonry;
+				PRODUCT_NAME = Masonry;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		7EF7227D9B20A1D549000096ACCB23D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -938,10 +1414,11 @@
 			};
 			name = Debug;
 		};
-		9C68E903AE2E82B99681DC5DD47F9EFC /* Debug */ = {
+		9FF76A7F08F28A022C915C39AB0E07B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 947994F83EE6E6DB469C1F6FADF63AF2 /* GCPopMenuView.debug.xcconfig */;
+			baseConfigurationReference = 3F58C588479B40F8D78D7054B5FDB45C /* Pods-GCPopMenuView_Example.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -951,18 +1428,19 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/GCPopMenuView/GCPopMenuView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GCPopMenuView/GCPopMenuView-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-GCPopMenuView_Example/Pods-GCPopMenuView_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/GCPopMenuView/GCPopMenuView.modulemap";
-				PRODUCT_MODULE_NAME = GCPopMenuView;
-				PRODUCT_NAME = GCPopMenuView;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GCPopMenuView_Example/Pods-GCPopMenuView_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -971,7 +1449,7 @@
 		};
 		BE874B114A0991701B09229EAAA4CA84 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C6513B09838318BD763CFD5390D1DE0 /* FBSnapshotTestCase.release.xcconfig */;
+			baseConfigurationReference = 24B67CFCCFB8B6FDC1549C923603F432 /* FBSnapshotTestCase.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1001,11 +1479,10 @@
 			};
 			name = Release;
 		};
-		D52CAF5C7B8AC72AB8DF4D570482F667 /* Release */ = {
+		E4F8060174AA21B4E3F63A9DCDADCDAC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B967175A202E05C7A7ABC8F5687F288 /* Pods-GCPopMenuView_Example.release.xcconfig */;
+			baseConfigurationReference = 139C86D2509BC9B67854746081F53450 /* GCAssistWindow.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1015,19 +1492,18 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-GCPopMenuView_Example/Pods-GCPopMenuView_Example-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/GCAssistWindow/GCAssistWindow-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GCAssistWindow/GCAssistWindow-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-GCPopMenuView_Example/Pods-GCPopMenuView_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/GCAssistWindow/GCAssistWindow.modulemap";
+				PRODUCT_MODULE_NAME = GCAssistWindow;
+				PRODUCT_NAME = GCAssistWindow;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1038,15 +1514,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00FAC5214ACD25EF3B18CFB91AD9DB36 /* Build configuration list for PBXNativeTarget "Pods-GCPopMenuView_Example" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				018786B7D98004ED239BDB3458D75FD8 /* Debug */,
-				D52CAF5C7B8AC72AB8DF4D570482F667 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		0E415B7F0A11B70F3148788DE972CA34 /* Build configuration list for PBXNativeTarget "Pods-GCPopMenuView_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1056,11 +1523,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2C9977C32C0606A9BAEDBE0EC36B4943 /* Build configuration list for PBXNativeTarget "GCPopMenuView" */ = {
+		31A4DF2CE80AD4D635902B77F0D03333 /* Build configuration list for PBXNativeTarget "Pods-GCPopMenuView_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9C68E903AE2E82B99681DC5DD47F9EFC /* Debug */,
-				0850E473946FCA587E39C4BA6F8669A3 /* Release */,
+				9FF76A7F08F28A022C915C39AB0E07B2 /* Debug */,
+				13820343DA4185192ECBB9434F9509AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1074,11 +1541,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		77BA472CF3DC2254133F253DAF8262C6 /* Build configuration list for PBXNativeTarget "GCPopMenuView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E23D271C7D3FC059EE173FDEC6DD99B /* Debug */,
+				192BF1DEEBA52A5EB331552F2E055C8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90B15A9C55E3268B9A1CFE18E89B4FE0 /* Build configuration list for PBXNativeTarget "Masonry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D3ADB87A1F0E8CFDFE40970A08EAD63 /* Debug */,
+				6B60EDC429431E9B295094C1731784C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A38070E189561F257BBD5A0A55CACCCF /* Build configuration list for PBXNativeTarget "FBSnapshotTestCase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				441C7939108738A0C7CD37CBADE0B85E /* Debug */,
 				BE874B114A0991701B09229EAAA4CA84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0CA7E065B62040EBF09507136ADBD5B /* Build configuration list for PBXNativeTarget "GCAssistWindow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45862B109D00B6B4823526207113C1A2 /* Debug */,
+				E4F8060174AA21B4E3F63A9DCDADCDAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
