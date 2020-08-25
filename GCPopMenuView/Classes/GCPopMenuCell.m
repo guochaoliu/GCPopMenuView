@@ -65,6 +65,7 @@
     _config = config;
     self.backgroundColor = self.config.itemBackgroundColor;
     self.bottomLineView.backgroundColor = self.config.lineColor;
+    self.titleLabel.textColor = self.config.titleColor;
     self.titleLabel.font = [UIFont systemFontOfSize:self.config.titleFont];
     [self.iconImageView mas_updateConstraints:^(MASConstraintMaker *make) {
         make.width.mas_equalTo(self.config.iconWidth);
