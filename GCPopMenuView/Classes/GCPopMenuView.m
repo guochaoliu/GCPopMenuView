@@ -176,7 +176,7 @@
     if (self.tableView.minX < minX) {
         self.tableView.frame = CGRectMake(minX, self.tableView.y, self.config.menuWidth, self.config.menuHeight);
     }
-    CGFloat maxX = rect.size.width - self.config.menuInterval / 2;
+    CGFloat maxX = targetX + rect.size.width - self.config.menuInterval / 2;
     if (self.tableView.maxX > maxX) {
         self.tableView.frame = CGRectMake(rect.origin.x + rect.size.width  - self.tableView.width - 6, self.tableView.y, self.config.menuWidth, self.config.menuHeight);
     }
@@ -184,7 +184,7 @@
     if (self.tableView.minY < minY) {
         self.tableView.frame = CGRectMake(self.tableView.x, minY, self.config.menuWidth, self.config.menuHeight);
     }
-    CGFloat maxY = rect.origin.y + rect.size.height - self.config.menuInterval / 2;
+    CGFloat maxY = targetY + rect.size.height - self.config.menuInterval / 2;
     if (self.tableView.maxY > maxY) {
         self.tableView.frame = CGRectMake(self.tableView.x, maxY - self.tableView.height, self.config.menuWidth, self.config.menuHeight);
     }
@@ -231,6 +231,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [[GCAssistWindowManager manager] deallocWindowWithIdentifier:AssistWindow_PopMenu];
+    if (self.didSelectItem) {
+        self.didSelectItem(self.config.itemArray[indexPath.row]);
+    }
 }
 #pragma mark -- UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
