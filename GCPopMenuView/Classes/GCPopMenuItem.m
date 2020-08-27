@@ -9,11 +9,15 @@
 #import "GCPopMenuItem.h"
 
 @implementation GCPopMenuItem
-+ (instancetype)itemWithTitle:(NSString *)title image:(UIImage *_Nullable)image userinfo:(id _Nullable)userinfo{
++ (instancetype)itemWithTitle:(NSString *)title image:(id _Nullable )image block:(void(^)(void))block{
     GCPopMenuItem *item = [[GCPopMenuItem alloc] init];
     item.title = title;
-    item.image = image;
-    item.userinfo = userinfo;
+    if ([image isKindOfClass:[UIImage class]]) {
+        item.image = image;
+    }else{
+        item.imageUrl = image;
+    }
+    item.block = block;
     return item;
 }
 @end

@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GCPopMenuItem.h"
 
 NS_ASSUME_NONNULL_BEGIN
 typedef enum : NSUInteger {
@@ -22,12 +21,12 @@ typedef enum : NSUInteger {
 @property (nonatomic, strong) UIView *souceView;
 /// 触发点相对于屏幕位置 tips: 无souceView或者自定义位置显示时需要设置。设置souceView，souceRect无效
 @property (nonatomic, assign) CGRect souceRect;
+/// souceRectBlock  /* 屏幕旋转时设置不同的触发点 */
+@property (nonatomic, copy) CGRect (^souceRectBlock)(UIDeviceOrientation orientation);
 /// 设置则menu显示在targetView范围内
 @property (nonatomic, weak) UIView *targetView;
 /// 设置则menu显示在targetRect范围内
 @property (nonatomic, assign) CGRect targetRect;
-/// 数据源
-@property (nonatomic, strong) NSArray<GCPopMenuItem *> *itemArray;
 #pragma mark -- menu config
 /// 箭头方向 默认：GCPopMenuArrowDirectionUP
 @property (nonatomic, assign) GCPopMenuArrowDirection arrowDirection;
@@ -35,8 +34,8 @@ typedef enum : NSUInteger {
 @property (nonatomic, assign) CGFloat radius;
 /// menu宽 默认：100
 @property (nonatomic, assign) CGFloat menuWidth;
-/// menu高 默认：150
-@property (nonatomic, assign) CGFloat menuHeight;
+/// menu最大高 默认：150
+@property (nonatomic, assign) CGFloat menuMaxHeight;
 /// menu间隔 默认：12
 @property (nonatomic, assign) CGFloat menuInterval;
 /// 箭头宽 默认：20

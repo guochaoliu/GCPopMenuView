@@ -5,10 +5,14 @@ PODS:
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
   - GCAssistWindow (0.1.2)
-  - GCPopMenuView (0.1.0):
+  - GCPopMenuView (0.1.2):
     - GCAssistWindow
     - Masonry
+    - SDWebImage
   - Masonry (1.1.0)
+  - SDWebImage (5.8.4):
+    - SDWebImage/Core (= 5.8.4)
+  - SDWebImage/Core (5.8.4)
 
 DEPENDENCIES:
   - FBSnapshotTestCase
@@ -19,6 +23,7 @@ SPEC REPOS:
     - FBSnapshotTestCase
     - GCAssistWindow
     - Masonry
+    - SDWebImage
 
 EXTERNAL SOURCES:
   GCPopMenuView:
@@ -27,8 +32,9 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   GCAssistWindow: c4f9616d550590fd389db943fbc640c975f5958f
-  GCPopMenuView: c40f8963efc859a0d310c82bc1f4a1b76db41e6a
+  GCPopMenuView: 5f42ce9c426b32d9ebfc379ae8f24515a043da53
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
 
 PODFILE CHECKSUM: 57ee5fe4c1bc939d22f3aa31c6a8c2556cb5e460
 

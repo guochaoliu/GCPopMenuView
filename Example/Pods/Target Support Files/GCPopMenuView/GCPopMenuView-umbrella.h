@@ -15,6 +15,7 @@
 #import "GCPopMenuConfig.h"
 #import "GCPopMenuItem.h"
 #import "GCPopMenuView.h"
+#import "UIView+GC.h"
 
 FOUNDATION_EXPORT double GCPopMenuViewVersionNumber;
 FOUNDATION_EXPORT const unsigned char GCPopMenuViewVersionString[];

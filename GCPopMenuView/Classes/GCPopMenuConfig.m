@@ -31,7 +31,7 @@
 - (void)config{
     self.arrowDirection = GCPopMenuArrowDirectionUP;
     self.menuWidth = Table_Width;
-    self.menuHeight = Table_Height;
+    self.menuMaxHeight = Table_Height;
     self.menuInterval = Table_Interval;
     self.radius = Table_CornerRadius;
     self.arrowWidth = Arrow_Width;
