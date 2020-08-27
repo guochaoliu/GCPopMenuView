@@ -15,13 +15,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *title;
 /// image
 @property (nonatomic, strong) UIImage *image;
+/// url
+@property (nonatomic, strong) NSURL *imageUrl;
 /// id
-@property (nonatomic, strong) id userinfo;
+@property (nonatomic, copy) void(^block)(void);
 /// 初始化
 /// @param title title
 /// @param image image
-/// @param userinfo 自定义属性
-+ (instancetype)itemWithTitle:(NSString *)title image:(UIImage  *_Nullable )image userinfo:(id _Nullable)userinfo;
++ (instancetype)itemWithTitle:(NSString *)title image:(id _Nullable )image block:(void(^)(void))block;
 @end
 
 NS_ASSUME_NONNULL_END

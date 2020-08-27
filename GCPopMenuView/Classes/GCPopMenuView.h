@@ -15,9 +15,16 @@ NS_ASSUME_NONNULL_BEGIN
 /// 展示menu
 /// @param config 配置
 - (void)showWithConfig:(GCPopMenuConfig *)config;
-/// 选择完成
-@property (nonatomic, copy) void(^didSelectItem)(GCPopMenuItem *menuItem);
-
+/// 添加Item
+/// @param title title
+/// @param image image
+/// @param block block
+- (void)addItemWithTitle:(NSString *)title image:(UIImage *)image block:(void(^)(void))block;
+/// 添加Item
+/// @param title title
+/// @param imageUrl imageurl
+/// @param block block
+- (void)addItemWithTitle:(NSString *)title imageUrl:(NSURL *)imageUrl block:(void(^)(void))block;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -16,8 +16,8 @@
 @property (nonatomic, strong) UIButton *btn;
 /// targetView
 @property (nonatomic, strong) UIView *targetView;
-/// <#注释#>
-@property (nonatomic, strong) GCPopMenuConfig *config;
+/// menu
+@property (nonatomic, strong) GCPopMenuView *menu;
 @end
 
 @implementation GCPopMenuViewController
@@ -46,17 +46,13 @@
         make.bottom.equalTo(self.view.mas_bottom).offset(-40);
     }];
     
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"BarItem" style:UIBarButtonItemStylePlain target:self action:@selector(barItemAction:)];
+    
     UIButton *targetBtn = [[UIButton alloc] init];
-    [targetBtn setTitle:@"指定显示范围" forState:UIControlStateNormal];
+    [targetBtn setTitle:@"指定范围" forState:UIControlStateNormal];
     [targetBtn setBackgroundColor:[UIColor redColor]];
     [targetBtn addTarget:self action:@selector(targetBtn:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:targetBtn];
-    [targetBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view.mas_top).offset(60);
-        make.centerX.equalTo(self.view.mas_centerX);
-        make.width.mas_equalTo(200);
-        make.height.mas_equalTo(44);
-    }];
     [self.view bringSubviewToFront:self.btn];
     
     UIButton *upBtn = [[UIButton alloc] init];
@@ -83,114 +79,148 @@
     [downBtn addTarget:self action:@selector(downBtn) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:downBtn];
     
+    [targetBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.mas_top).offset(60);
+        make.centerX.equalTo(self.view.mas_centerX);
+        make.width.equalTo(self.view.mas_width).multipliedBy(1.0/5.0);
+        make.height.mas_equalTo(44);
+    }];
     [leftBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(targetBtn.mas_left);
         make.centerY.equalTo(targetBtn.mas_centerY);
-        make.width.mas_equalTo(80);
+        make.width.equalTo(self.view.mas_width).multipliedBy(1.0/5.0);
         make.height.mas_equalTo(44);
     }];
     [rightBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(targetBtn.mas_right);
         make.centerY.equalTo(targetBtn.mas_centerY);
-        make.width.mas_equalTo(80);
+        make.width.equalTo(self.view.mas_width).multipliedBy(1.0/5.0);
         make.height.mas_equalTo(44);
     }];
     [upBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(leftBtn.mas_left);
         make.centerY.equalTo(targetBtn.mas_centerY);
-        make.width.mas_equalTo(80);
+        make.width.equalTo(self.view.mas_width).multipliedBy(1.0/5.0);
         make.height.mas_equalTo(44);
     }];
     [downBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(rightBtn.mas_right);
         make.centerY.equalTo(targetBtn.mas_centerY);
-        make.width.mas_equalTo(80);
+        make.width.equalTo(self.view.mas_width).multipliedBy(1.0/5.0);
         make.height.mas_equalTo(44);
     }];
-
-    NSMutableArray *itemArray = [NSMutableArray array];
-    for (int i = 0; i < 5; i ++) {
-        UIImage *image = [UIImage imageNamed:@"icon"];
-        GCPopMenuItem *item = [GCPopMenuItem itemWithTitle:@"测试title" image:image userinfo:nil];
-        item.userinfo = [NSString stringWithFormat:@"%d",i];
-        [itemArray addObject:item];
-    }
-    self.config = [[GCPopMenuConfig alloc] init];
-    self.config.itemArray = itemArray;
-    self.config.souceView = self.btn;
-    self.config.menuWidth = 160;
+    self.menu = [[GCPopMenuView alloc] init];
 }
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     UITouch *touch = [touches anyObject];
     CGPoint point= [touch locationInView:self.view];
     self.btn.frame = CGRectMake(point.x - 40, point.y - 40, 80, 80);
 }
+- (void)barItemAction:(UIBarButtonItem *)item{
+    GCPopMenuConfig *config = [[GCPopMenuConfig alloc] init];
+    config.menuWidth = 160;
+    [config setSouceRectBlock:^CGRect(UIDeviceOrientation orientation) {
+        switch (orientation) {
+            case UIDeviceOrientationPortrait:
+            {
+                return CGRectMake(self.view.bounds.size.width - 67 - 12, 20, item.width, 44);
+            }
+                break;
+            case UIDeviceOrientationPortraitUpsideDown:
+            {
+                return CGRectMake(self.view.bounds.size.width - 67 - 12, 20, item.width, 44);
+            }
+                break;
+            case UIDeviceOrientationLandscapeLeft:
+            {
+                return CGRectMake(self.view.bounds.size.width - 67 - 12, 0, item.width, 44);
+            }
+                break;
+            case UIDeviceOrientationLandscapeRight:
+            {
+                return CGRectMake(self.view.bounds.size.width - 67 - 12, 0, item.width, 44);
+            }
+                break;
+            default:
+                break;
+        }
+        return CGRectMake(self.view.bounds.size.width - 67 - 12, 20, item.width, 44);
+    }];
+    config.arrowDirection = GCPopMenuArrowDirectionRight;
+    config.targetView = self.view;
+    [self addItem];
+    [self.menu showWithConfig:config];
+}
 - (void)targetBtn:(UIButton *)btn{
     self.targetView.hidden = !self.targetView.hidden;
-    if (self.targetView.hidden) {
-        self.config.targetView = nil;
-    }else{
-        self.config.targetView = self.targetView;
-    }
 }
 - (void)upBtn{
-    __weak typeof(self) weakSelf = self;
-    self.config.arrowDirection = GCPopMenuArrowDirectionUP;
-    GCPopMenuView *menu = [[GCPopMenuView alloc] init];
-    [menu setDidSelectItem:^(GCPopMenuItem * _Nonnull menuItem) {
-        UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"选择完成" message:menuItem.userinfo preferredStyle:UIAlertControllerStyleAlert];
-        [alertVC addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-            
-        }]];
-        [weakSelf presentViewController:alertVC animated:YES completion:^{
-            
-        }];
-    }];
-    [menu showWithConfig:self.config];
+    GCPopMenuConfig *config = [[GCPopMenuConfig alloc] init];
+    config.menuWidth = 160;
+    config.souceView = self.btn;
+    config.arrowDirection = GCPopMenuArrowDirectionUP;
+    if (!self.targetView.hidden) {
+        config.targetView = self.targetView;
+    }
+    [self addItem];
+    [self.menu showWithConfig:config];
 }
 - (void)leftBtn{
-    __weak typeof(self) weakSelf = self;
-    self.config.arrowDirection = GCPopMenuArrowDirectionLeft;
-    GCPopMenuView *menu = [[GCPopMenuView alloc] init];
-    [menu setDidSelectItem:^(GCPopMenuItem * _Nonnull menuItem) {
-        UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"选择完成" message:menuItem.userinfo preferredStyle:UIAlertControllerStyleAlert];
-        [alertVC addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-            
-        }]];
-        [weakSelf presentViewController:alertVC animated:YES completion:^{
-            
-        }];
-    }];
-    [menu showWithConfig:self.config];
+    GCPopMenuConfig *config = [[GCPopMenuConfig alloc] init];
+    config.menuWidth = 160;
+    config.souceView = self.btn;
+    config.arrowDirection = GCPopMenuArrowDirectionLeft;
+    if (!self.targetView.hidden) {
+        config.targetView = self.targetView;
+    }
+    [self addItem];
+    [self.menu showWithConfig:config];
 }
 - (void)rightBtn{
-    __weak typeof(self) weakSelf = self;
-    self.config.arrowDirection = GCPopMenuArrowDirectionRight;
-    GCPopMenuView *menu = [[GCPopMenuView alloc] init];
-    [menu setDidSelectItem:^(GCPopMenuItem * _Nonnull menuItem) {
-        UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"选择完成" message:menuItem.userinfo preferredStyle:UIAlertControllerStyleAlert];
-        [alertVC addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-            
-        }]];
-        [weakSelf presentViewController:alertVC animated:YES completion:^{
-            
-        }];
-    }];
-    [menu showWithConfig:self.config];
+    GCPopMenuConfig *config = [[GCPopMenuConfig alloc] init];
+    config.menuWidth = 160;
+    config.souceView = self.btn;
+    config.arrowDirection = GCPopMenuArrowDirectionRight;
+    if (!self.targetView.hidden) {
+        config.targetView = self.targetView;
+    }
+    [self addItem];
+    [self.menu showWithConfig:config];
 }
 - (void)downBtn{
     __weak typeof(self) weakSelf = self;
-    self.config.arrowDirection = GCPopMenuArrowDirectionDown;
-    GCPopMenuView *menu = [[GCPopMenuView alloc] init];
-    [menu setDidSelectItem:^(GCPopMenuItem * _Nonnull menuItem) {
-        UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"选择完成" message:menuItem.userinfo preferredStyle:UIAlertControllerStyleAlert];
+    GCPopMenuConfig *config = [[GCPopMenuConfig alloc] init];
+    config.menuWidth = 160;
+    config.souceView = self.btn;
+    config.arrowDirection = GCPopMenuArrowDirectionDown;
+    if (!self.targetView.hidden) {
+        config.targetView = self.targetView;
+    }
+    UIImage *image = [UIImage imageNamed:@"icon"];
+    [self.menu addItemWithTitle:@"测试title" image:image block:^{
+        UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"选择完成" message:nil preferredStyle:UIAlertControllerStyleAlert];
         [alertVC addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-            
+
         }]];
         [weakSelf presentViewController:alertVC animated:YES completion:^{
-            
+
         }];
     }];
-    [menu showWithConfig:self.config];
+    [self.menu showWithConfig:config];
+}
+- (void)addItem{
+    __weak typeof(self) weakSelf = self;
+    for (int i = 0; i < 5; i ++) {
+        UIImage *image = [UIImage imageNamed:@"icon"];
+        [self.menu addItemWithTitle:@"测试title" image:image block:^{
+            UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"选择完成" message:[NSString stringWithFormat:@"%d",i] preferredStyle:UIAlertControllerStyleAlert];
+            [alertVC addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+
+            }]];
+            [weakSelf presentViewController:alertVC animated:YES completion:^{
+
+            }];
+        }];
+    }
 }
 @end

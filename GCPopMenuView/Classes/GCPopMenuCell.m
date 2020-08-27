@@ -8,6 +8,7 @@
 
 #import "GCPopMenuCell.h"
 #import <Masonry/Masonry.h>
+#import <SDWebImage/SDWebImage.h>
 
 #define Item_Interval 12.0f
 @interface GCPopMenuCell ()
@@ -59,7 +60,11 @@
 - (void)setItem:(GCPopMenuItem *)item{
     _item = item;
     self.titleLabel.text = item.title;
-    self.iconImageView.image = item.image;
+    if (item.image) {
+        self.iconImageView.image = item.image;
+    }else{
+        [self.imageView sd_setImageWithURL:item.imageUrl];
+    }
 }
 - (void)setConfig:(GCPopMenuConfig *)config{
     _config = config;

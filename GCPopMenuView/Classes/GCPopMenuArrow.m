@@ -7,6 +7,7 @@
 //
 
 #import "GCPopMenuArrow.h"
+#import <Masonry/Masonry.h>
 
 @interface GCPopMenuArrow ()
 /// imageView
@@ -21,12 +22,15 @@
     return self;
 }
 - (void)setupUI{
-    self.imageView = [[UIImageView alloc] initWithFrame:self.bounds];
+    self.imageView = [[UIImageView alloc] init];
     [self addSubview:self.imageView];
 }
 - (void)setConfig:(GCPopMenuConfig *)config{
     _config = config;
-    self.imageView.image = [self drawArrowImage:self.bounds.size];
+    CGRect rect = CGRectMake(0, 0, config.arrowWidth, config.arrowHeight);
+    self.frame = rect;
+    self.imageView.frame = rect;
+    self.imageView.image = [self drawArrowImage:rect.size];
 }
 //绘制箭头图片
 - (UIImage *)drawArrowImage:(CGSize)size
@@ -47,14 +51,14 @@
             point3 = CGPointMake(0, size.height);
             break;
         case GCPopMenuArrowDirectionLeft:
-            point1 = CGPointMake(0, 0);
-            point2 = CGPointMake(size.width/2.0, size.height/2.0);
-            point3 = CGPointMake(0, size.height);
-            break;
-        case GCPopMenuArrowDirectionRight:
             point1 = CGPointMake(size.width/2.0, size.height/2.0);
             point2 = CGPointMake(size.width, size.height);
             point3 = CGPointMake(size.width, 0);
+            break;
+        case GCPopMenuArrowDirectionRight:
+            point1 = CGPointMake(0, 0);
+            point2 = CGPointMake(size.width/2.0, size.height/2.0);
+            point3 = CGPointMake(0, size.height);
             break;
         case GCPopMenuArrowDirectionDown:
             point1 = CGPointMake(0, 0);

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GCPopMenuView'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'A short description of GCPopMenuView.'
 
 # This description is used to generate tags and improve search results.
@@ -41,4 +41,5 @@ TODO: Add long description of the pod here.
   # s.dependency 'AFNetworking', '~> 2.3'
   s.dependency 'GCAssistWindow'
   s.dependency 'Masonry'
+  s.dependency 'SDWebImage'
 end
