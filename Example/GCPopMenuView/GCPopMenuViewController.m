@@ -18,6 +18,8 @@
 @property (nonatomic, strong) UIView *targetView;
 /// menu
 @property (nonatomic, strong) GCPopMenuView *menu;
+/// showImage
+@property (nonatomic, assign) BOOL showImage;
 @end
 
 @implementation GCPopMenuViewController
@@ -29,6 +31,7 @@
 
 - (void)setupUI{
     self.view.backgroundColor = [UIColor whiteColor];
+    self.showImage = YES;
     self.btn = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 80, 80)];
     [self.btn setTitle:@"moveBtn" forState:UIControlStateNormal];
     [self.btn setBackgroundColor:[UIColor redColor]];
@@ -47,6 +50,7 @@
     }];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"BarItem" style:UIBarButtonItemStylePlain target:self action:@selector(barItemAction:)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"无图" style:UIBarButtonItemStylePlain target:self action:@selector(noImageAction)];
     
     UIButton *targetBtn = [[UIButton alloc] init];
     [targetBtn setTitle:@"指定范围" forState:UIControlStateNormal];
@@ -109,12 +113,14 @@
         make.width.equalTo(self.view.mas_width).multipliedBy(1.0/5.0);
         make.height.mas_equalTo(44);
     }];
-    self.menu = [[GCPopMenuView alloc] init];
 }
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     UITouch *touch = [touches anyObject];
     CGPoint point= [touch locationInView:self.view];
     self.btn.frame = CGRectMake(point.x - 40, point.y - 40, 80, 80);
+}
+- (void)noImageAction{
+    self.showImage = !self.showImage;
 }
 - (void)barItemAction:(UIBarButtonItem *)item{
     GCPopMenuConfig *config = [[GCPopMenuConfig alloc] init];
@@ -159,6 +165,10 @@
     config.menuWidth = 160;
     config.souceView = self.btn;
     config.arrowDirection = GCPopMenuArrowDirectionUP;
+    config.automaticMenuWidth = YES;
+    if (!self.showImage) {
+        config.iconWidth = 0;
+    }
     if (!self.targetView.hidden) {
         config.targetView = self.targetView;
     }
@@ -170,6 +180,10 @@
     config.menuWidth = 160;
     config.souceView = self.btn;
     config.arrowDirection = GCPopMenuArrowDirectionLeft;
+    config.automaticMenuWidth = YES;
+    if (!self.showImage) {
+        config.iconWidth = 0;
+    }
     if (!self.targetView.hidden) {
         config.targetView = self.targetView;
     }
@@ -181,6 +195,9 @@
     config.menuWidth = 160;
     config.souceView = self.btn;
     config.arrowDirection = GCPopMenuArrowDirectionRight;
+    if (!self.showImage) {
+        config.iconWidth = 0;
+    }
     if (!self.targetView.hidden) {
         config.targetView = self.targetView;
     }
@@ -189,10 +206,14 @@
 }
 - (void)downBtn{
     __weak typeof(self) weakSelf = self;
+    self.menu = [[GCPopMenuView alloc] init];
     GCPopMenuConfig *config = [[GCPopMenuConfig alloc] init];
     config.menuWidth = 160;
     config.souceView = self.btn;
     config.arrowDirection = GCPopMenuArrowDirectionDown;
+    if (!self.showImage) {
+        config.iconWidth = 0;
+    }
     if (!self.targetView.hidden) {
         config.targetView = self.targetView;
     }
@@ -209,9 +230,13 @@
     [self.menu showWithConfig:config];
 }
 - (void)addItem{
+    self.menu = [[GCPopMenuView alloc] init];
     __weak typeof(self) weakSelf = self;
     for (int i = 0; i < 5; i ++) {
-        UIImage *image = [UIImage imageNamed:@"icon"];
+        UIImage *image;
+        if (self.showImage) {
+            image = [UIImage imageNamed:@"icon"];
+        }
         [self.menu addItemWithTitle:@"测试title" image:image block:^{
             UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"选择完成" message:[NSString stringWithFormat:@"%d",i] preferredStyle:UIAlertControllerStyleAlert];
             [alertVC addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {

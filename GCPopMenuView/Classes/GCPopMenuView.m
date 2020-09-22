@@ -47,6 +47,14 @@
     self.config = config;
     self.arrowView.config = config;
     self.tableView.layer.cornerRadius = config.radius;
+    if (self.config.automaticMenuWidth) {
+        CGFloat menWidth = 0;
+        for (GCPopMenuItem *item in self.itemArray) {
+            CGFloat width = [self.config calculateMenuWidthWithItem:item];
+            menWidth = width > menWidth ? width : menWidth;
+        }
+        self.config.menuWidth = menWidth;
+    }
     //menu未销毁 config更新 手动更新frame
     if (oldConfig && ![_config isEqual:oldConfig]) {
         [self refreshFrame];
@@ -261,6 +269,10 @@
     return _itemArray;
 }
 #pragma mark -- addItem
+- (void)addItemWithTitle:(NSString *)title block:(void(^)(void))block{
+    GCPopMenuItem *item = [GCPopMenuItem itemWithTitle:title image:nil block:block];
+    [self.itemArray addObject:item];
+}
 - (void)addItemWithTitle:(NSString *)title image:(UIImage *)image block:(void(^)(void))block{
     GCPopMenuItem *item = [GCPopMenuItem itemWithTitle:title image:image block:block];
     [self.itemArray addObject:item];
@@ -287,8 +299,7 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     GCPopMenuCell *cell = [tableView dequeueReusableCellWithIdentifier:Cell_ID forIndexPath:indexPath];
-    cell.item = self.itemArray[indexPath.row];
-    cell.config = self.config;
+    [cell setConfig:self.config item:self.itemArray[indexPath.row]];
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
