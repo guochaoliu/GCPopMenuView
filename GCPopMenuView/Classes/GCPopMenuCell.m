@@ -10,7 +10,6 @@
 #import <Masonry/Masonry.h>
 #import <SDWebImage/SDWebImage.h>
 
-#define Item_Interval 12.0f
 @interface GCPopMenuCell ()
 //** imageView *//
 @property (nonatomic, strong) UIImageView *iconImageView;
@@ -57,13 +56,31 @@
         make.height.mas_equalTo(0.3f);
     }];
 }
+- (void)setConfig:(GCPopMenuConfig *)config item:(GCPopMenuItem *)item{
+    self.config = config;
+    self.item = item;
+}
 - (void)setItem:(GCPopMenuItem *)item{
     _item = item;
     self.titleLabel.text = item.title;
     if (item.image) {
         self.iconImageView.image = item.image;
-    }else{
+    }
+    if (item.imageUrl) {
         [self.imageView sd_setImageWithURL:item.imageUrl];
+    }
+    if ((!item.image && !item.imageUrl) || self.config.iconWidth <= 0) {
+        [self.iconImageView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.contentView.mas_left);
+            make.width.mas_equalTo(0);
+            make.height.mas_equalTo(0);
+        }];
+    }else{
+        [self.iconImageView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.contentView.mas_left).offset(Item_Interval);
+            make.width.mas_equalTo(self.config.iconWidth);
+            make.height.mas_equalTo(self.config.iconWidth);
+        }];
     }
 }
 - (void)setConfig:(GCPopMenuConfig *)config{
@@ -72,10 +89,6 @@
     self.bottomLineView.backgroundColor = self.config.lineColor;
     self.titleLabel.textColor = self.config.titleColor;
     self.titleLabel.font = [UIFont systemFontOfSize:self.config.titleFont];
-    [self.iconImageView mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.width.mas_equalTo(self.config.iconWidth);
-        make.height.mas_equalTo(self.config.iconHeight);
-    }];
 }
 
 @end

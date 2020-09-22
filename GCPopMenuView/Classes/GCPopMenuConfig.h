@@ -7,8 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GCPopMenuItem.h"
 
 NS_ASSUME_NONNULL_BEGIN
+#define Item_Interval 12.0f
 typedef enum : NSUInteger {
     GCPopMenuArrowDirectionUP,
     GCPopMenuArrowDirectionLeft,
@@ -34,6 +36,8 @@ typedef enum : NSUInteger {
 @property (nonatomic, assign) CGFloat radius;
 /// menu宽 默认：100
 @property (nonatomic, assign) CGFloat menuWidth;
+/// 自动计算行宽 默认：NO
+@property (nonatomic, assign) BOOL automaticMenuWidth;
 /// menu最大高 默认：150
 @property (nonatomic, assign) CGFloat menuMaxHeight;
 /// menu间隔 默认：12
@@ -61,6 +65,9 @@ typedef enum : NSUInteger {
 @property (nonatomic, strong) UIColor *titleColor;
 /// titleFont
 @property (nonatomic, assign) CGFloat titleFont;
+/// 计算cell宽
+/// @param item item
+- (CGFloat)calculateMenuWidthWithItem:(GCPopMenuItem *)item;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -17,7 +17,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) GCPopMenuItem *item;
 /// config
 @property (nonatomic, weak) GCPopMenuConfig *config;
-
+/// 设置数据
+/// @param item item
+/// @param config config
+- (void)setConfig:(GCPopMenuConfig *)config item:(GCPopMenuItem *)item;
 @end
 
 NS_ASSUME_NONNULL_END

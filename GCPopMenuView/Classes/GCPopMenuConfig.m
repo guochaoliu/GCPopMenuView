@@ -30,6 +30,7 @@
 //默认配置
 - (void)config{
     self.arrowDirection = GCPopMenuArrowDirectionUP;
+    self.automaticMenuWidth = NO;
     self.menuWidth = Table_Width;
     self.menuMaxHeight = Table_Height;
     self.menuInterval = Table_Interval;
@@ -45,5 +46,17 @@
     self.lineColor = [UIColor colorWithRed:100.0f/255.0f green:100.0f/255.0f blue:100.0f/255.0f alpha:1];
     self.titleColor = [UIColor colorWithRed:244.0f/255.0f green:244.0f/255.0f blue:244.0f/255.0f alpha:1];
     self.titleFont = Title_Font;
+}
+- (CGFloat)calculateMenuWidthWithItem:(GCPopMenuItem *)item{
+    CGRect rect = [item.title boundingRectWithSize:CGSizeMake(MAXFLOAT, self.itemHeight)
+                                            options:NSStringDrawingUsesLineFragmentOrigin
+                                         attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:self.titleFont]}
+                                            context:nil];
+    CGFloat iconWidth = self.iconWidth;
+    if ((!item.image && !item.imageUrl) || self.iconWidth <= 0) {
+        iconWidth = 0;
+    }
+    CGFloat menuWidth = Item_Interval + iconWidth + Item_Interval + rect.size.width + Item_Interval;
+    return menuWidth;
 }
 @end
