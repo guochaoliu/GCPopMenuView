@@ -14,12 +14,12 @@
 @interface GCPopMenuViewController ()
 /// btn
 @property (nonatomic, strong) UIButton *btn;
-/// targetView
-@property (nonatomic, strong) UIView *targetView;
-/// menu
-@property (nonatomic, strong) GCPopMenuView *menu;
 /// showImage
 @property (nonatomic, assign) BOOL showImage;
+/// limit
+@property (nonatomic, assign) BOOL limit;
+/// targetBtn
+@property (nonatomic, strong) UIButton *targetBtn;
 @end
 
 @implementation GCPopMenuViewController
@@ -28,35 +28,22 @@
     [super viewDidLoad];
     [self setupUI];
 }
-
 - (void)setupUI{
     self.view.backgroundColor = [UIColor whiteColor];
     self.showImage = YES;
+    self.limit = NO;
     self.btn = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 80, 80)];
     [self.btn setTitle:@"moveBtn" forState:UIControlStateNormal];
     [self.btn setBackgroundColor:[UIColor redColor]];
-//    [self.btn addTarget:self action:@selector(btnAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.btn];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"旋转设备" style:UIBarButtonItemStylePlain target:self action:@selector(barItemAction:)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"无icon" style:UIBarButtonItemStylePlain target:self action:@selector(noImageAction:)];
     
-    self.targetView = [[UIView alloc] init];
-    self.targetView.backgroundColor = [UIColor blueColor];
-    self.targetView.hidden = YES;
-    [self.view addSubview:self.targetView];
-    [self.targetView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view.mas_top).offset(40);
-        make.left.equalTo(self.view.mas_left).offset(40);
-        make.right.equalTo(self.view.mas_right).offset(-40);
-        make.bottom.equalTo(self.view.mas_bottom).offset(-40);
-    }];
-    
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"BarItem" style:UIBarButtonItemStylePlain target:self action:@selector(barItemAction:)];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"无图" style:UIBarButtonItemStylePlain target:self action:@selector(noImageAction)];
-    
-    UIButton *targetBtn = [[UIButton alloc] init];
-    [targetBtn setTitle:@"指定范围" forState:UIControlStateNormal];
-    [targetBtn setBackgroundColor:[UIColor redColor]];
-    [targetBtn addTarget:self action:@selector(targetBtn:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:targetBtn];
+    self.targetBtn = [[UIButton alloc] init];
+    [self.targetBtn setTitle:@"限制范围" forState:UIControlStateNormal];
+    [self.targetBtn setBackgroundColor:[UIColor redColor]];
+    [self.targetBtn addTarget:self action:@selector(targetBtn:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.targetBtn];
     [self.view bringSubviewToFront:self.btn];
     
     UIButton *upBtn = [[UIButton alloc] init];
@@ -83,33 +70,33 @@
     [downBtn addTarget:self action:@selector(downBtn) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:downBtn];
     
-    [targetBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.targetBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view.mas_top).offset(60);
         make.centerX.equalTo(self.view.mas_centerX);
         make.width.equalTo(self.view.mas_width).multipliedBy(1.0/5.0);
         make.height.mas_equalTo(44);
     }];
     [leftBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(targetBtn.mas_left);
-        make.centerY.equalTo(targetBtn.mas_centerY);
+        make.right.equalTo(self.targetBtn.mas_left);
+        make.centerY.equalTo(self.targetBtn.mas_centerY);
         make.width.equalTo(self.view.mas_width).multipliedBy(1.0/5.0);
         make.height.mas_equalTo(44);
     }];
     [rightBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(targetBtn.mas_right);
-        make.centerY.equalTo(targetBtn.mas_centerY);
+        make.left.equalTo(self.targetBtn.mas_right);
+        make.centerY.equalTo(self.targetBtn.mas_centerY);
         make.width.equalTo(self.view.mas_width).multipliedBy(1.0/5.0);
         make.height.mas_equalTo(44);
     }];
     [upBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(leftBtn.mas_left);
-        make.centerY.equalTo(targetBtn.mas_centerY);
+        make.centerY.equalTo(self.targetBtn.mas_centerY);
         make.width.equalTo(self.view.mas_width).multipliedBy(1.0/5.0);
         make.height.mas_equalTo(44);
     }];
     [downBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(rightBtn.mas_right);
-        make.centerY.equalTo(targetBtn.mas_centerY);
+        make.centerY.equalTo(self.targetBtn.mas_centerY);
         make.width.equalTo(self.view.mas_width).multipliedBy(1.0/5.0);
         make.height.mas_equalTo(44);
     }];
@@ -119,9 +106,16 @@
     CGPoint point= [touch locationInView:self.view];
     self.btn.frame = CGRectMake(point.x - 40, point.y - 40, 80, 80);
 }
-- (void)noImageAction{
+//显示/隐藏icon
+- (void)noImageAction:(UIBarButtonItem *)item{
     self.showImage = !self.showImage;
+    if (self.showImage) {
+        item.title = @"无icon";
+    }else{
+        item.title = @"显示icon";
+    }
 }
+//barItem展示menu   旋转跟随
 - (void)barItemAction:(UIBarButtonItem *)item{
     GCPopMenuConfig *config = [[GCPopMenuConfig alloc] init];
     config.menuWidth = 160;
@@ -153,13 +147,23 @@
         return CGRectMake(self.view.bounds.size.width - 67 - 12, 20, item.width, 44);
     }];
     config.arrowDirection = GCPopMenuArrowDirectionRight;
+    config.automaticMenuWidth = YES;
     config.targetView = self.view;
-    [self addItem];
-    [self.menu showWithConfig:config];
+    GCPopMenuView *menu = [self addItem];
+    [menu showWithConfig:config];
 }
+//指定menu显示范围
 - (void)targetBtn:(UIButton *)btn{
-    self.targetView.hidden = !self.targetView.hidden;
+    self.limit = !self.limit;
+    if (self.limit) {
+        self.view.backgroundColor = [UIColor orangeColor];
+        [self.targetBtn setTitle:@"不限范围" forState:UIControlStateNormal];
+    }else{
+        self.view.backgroundColor = [UIColor whiteColor];
+        [self.targetBtn setTitle:@"限制范围" forState:UIControlStateNormal];
+    }
 }
+//上
 - (void)upBtn{
     GCPopMenuConfig *config = [[GCPopMenuConfig alloc] init];
     config.menuWidth = 160;
@@ -169,12 +173,13 @@
     if (!self.showImage) {
         config.iconWidth = 0;
     }
-    if (!self.targetView.hidden) {
-        config.targetView = self.targetView;
+    if (self.limit) {
+        config.targetView = self.view;
     }
-    [self addItem];
-    [self.menu showWithConfig:config];
+    GCPopMenuView *menu = [self addItem];
+    [menu showWithConfig:config];
 }
+//左
 - (void)leftBtn{
     GCPopMenuConfig *config = [[GCPopMenuConfig alloc] init];
     config.menuWidth = 160;
@@ -184,12 +189,13 @@
     if (!self.showImage) {
         config.iconWidth = 0;
     }
-    if (!self.targetView.hidden) {
-        config.targetView = self.targetView;
+    if (self.limit) {
+        config.targetView = self.view;
     }
-    [self addItem];
-    [self.menu showWithConfig:config];
+    GCPopMenuView *menu = [self addItem];
+    [menu showWithConfig:config];
 }
+//右
 - (void)rightBtn{
     GCPopMenuConfig *config = [[GCPopMenuConfig alloc] init];
     config.menuWidth = 160;
@@ -198,15 +204,16 @@
     if (!self.showImage) {
         config.iconWidth = 0;
     }
-    if (!self.targetView.hidden) {
-        config.targetView = self.targetView;
+    if (self.limit) {
+        config.targetView = self.view;
     }
-    [self addItem];
-    [self.menu showWithConfig:config];
+    GCPopMenuView *menu = [self addItem];
+    [menu showWithConfig:config];
 }
+//下
 - (void)downBtn{
     __weak typeof(self) weakSelf = self;
-    self.menu = [[GCPopMenuView alloc] init];
+    GCPopMenuView *menu = [[GCPopMenuView alloc] init];
     GCPopMenuConfig *config = [[GCPopMenuConfig alloc] init];
     config.menuWidth = 160;
     config.souceView = self.btn;
@@ -214,11 +221,11 @@
     if (!self.showImage) {
         config.iconWidth = 0;
     }
-    if (!self.targetView.hidden) {
-        config.targetView = self.targetView;
+    if (self.limit) {
+        config.targetView = self.view;
     }
     UIImage *image = [UIImage imageNamed:@"icon"];
-    [self.menu addItemWithTitle:@"测试title" image:image block:^{
+    [menu addItemWithTitle:@"测试title" image:image block:^{
         UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"选择完成" message:nil preferredStyle:UIAlertControllerStyleAlert];
         [alertVC addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
 
@@ -227,17 +234,17 @@
 
         }];
     }];
-    [self.menu showWithConfig:config];
+    [menu showWithConfig:config];
 }
-- (void)addItem{
-    self.menu = [[GCPopMenuView alloc] init];
+- (GCPopMenuView *)addItem{
+    GCPopMenuView *menu = [[GCPopMenuView alloc] init];
     __weak typeof(self) weakSelf = self;
     for (int i = 0; i < 5; i ++) {
         UIImage *image;
         if (self.showImage) {
             image = [UIImage imageNamed:@"icon"];
         }
-        [self.menu addItemWithTitle:@"测试title" image:image block:^{
+        [menu addItemWithTitle:@"测试title" image:image block:^{
             UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"选择完成" message:[NSString stringWithFormat:@"%d",i] preferredStyle:UIAlertControllerStyleAlert];
             [alertVC addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
 
@@ -247,5 +254,6 @@
             }];
         }];
     }
+    return menu;
 }
 @end
